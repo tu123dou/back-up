@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //1）方法的作用
+//    2）是否传递参数
+//    3）返回值
+//    4）原数组是否改变
+
+//    1、增加、删除、替换
+//    1）push：向数组末尾增加内容
+//       参数(要增加的内容）
+//       返回值：数组的长度
+//       原数组改变
+    var ary = [2,3,4,5,6];
+//    var res = ary.push('zf');
+//    console.log(res,ary);
+
+//    ary[0] = 1;
+//    ary[ary.length] = 'zfpx';
+//    console.log(ary);
+
+//    2)pop:删除数组中最后一项
+//      参数：无
+//      返回值：被删除的那一项
+//      原数组改变
+    var ary = [12,23,34,45,56];
+//    var res = ary.pop();
+//    console.log(res,ary);
+
+//    3）shift():删除数组中的第一项
+//      返回值：删除的那一项
+//      原数组改变
+//    var res = ary.shift();
+//    console.log(res,ary);
+
+//    4）unshift():向数组中最开始的位置添加内容
+//    参数：增加的内容
+//    返回值：新数组的长度
+//    原数组改变
+//    var res = ary.unshift('zfpx');
+//    console.log(res,ary);
+
+//    5)splice(n,m):删除 从索引n开始删除m个,返回值：被删除的每一项以一个新数组返回，原数组改变
+
+    var ary = [12,3,4,5,6,7];
+//    var res = ary.splice(2,3);
+//    console.log(res,ary);
+
+//    splice(n,m,x):替换 从索引n开始删除m个，用x替换删除的内容,原数组改变
+//    splice(n,0,x)：增加，在索引n前面增加一项，返回值是一个空数组，原数组改变
+//    var res = ary.splice(3);
+//    console.log(res,ary);
+
+//    splice(0)：克隆 把原来的数组克隆了一份一模一样的 原数组改变
+//    splice(n)：从索引n开始，删除到最末尾的位置
+//    splice()：不可以这样用
+
+
+    var ary = [12,3,4,5,6,7];
+
+//    删除索引为2的那一项：
+//    ary.splice(2,1)
+
+//    删除索引为[n,m]
+//    splice(n,m)
+//    [2,3]
+//    ary.splice(n,m-n+1)
+//    ary.splice(2,2);
+//    console.log(ary);
+
+//    2、截取，拼接
+//    slice(n,m) 从索引n开始找到索引为m处（不包含m）,将找到的内容以一个新数组返回，原数组不变
+//    slice(n)  从索引n开始到末尾的位置，将找到的内容以一个新数组返回，原数组不变
+//    slice(0) 、slice() 克隆一份一模一样的
+
+//    var ary = [12,2,3,5,6];
+//    var res = ary.slice();
+//    console.log(res,ary);
+
+//    克隆：slice(0) 、slice()、splice(0)  ary1.concat()
+//    .concat()：数组拼接,将ary2拼接到ary1的后面，返回一个新数组
+    var ary1 = [1,2,3];
+    var ary2 = [6,7,8];
+//    var res = ary1.concat([100,200]);
+//    console.log(res);
+//    3、将数组转为字符串
+//    1）toString() 把数组转化为字符串,原数组不变
+    var res = ary1.join('+');
+    console.log(res);//"1+2+3"
+    console.log(ary1)
+     var res = ary1.join(',');
+    console.log(res);//"1,2,3"
+    console.log(ary1.toString());//"1,2,3"
+//    2）join：按照每一个分隔符，把数组中的每一项拼接成一个字符串,原来的数组不变
+//    join('')  以字符串的形式返回
+//    join('+')  每一项之间以+隔开
+
+//    计算 eval
+    var ary1 = [10,2,3];
+    console.log(ary1.join(' ')) //-->'10 2 3'
+    var a = eval(ary1.join('-'));
+    console.log(a)
+    console.log(eval('4,2'));
+
+//    4、排序
+//    sort()
+    var ary = [12,22,11,34,45,12,9,92];
+    var res = ary.sort();
+    console.log(res,ary);
+
+//    从小到大的顺序
+    ary.sort(function(a,b){
+        return a-b;
+    });
+//    从大到小的顺序
+    ary.sort(function(a,b){
+        return b-a;
+    });
+    console.log(ary);
+
+//    倒序
+   var ary = [1,2,3,4,5,9,6,3];
+//    ary.reverse();
+//    console.log(ary);
+
+//    5、不兼容的方法（不兼容iE6~iE8）
+//    1)indexOf()  在数组中第一次出现的索引,返回值是对应的索引
+//    2)lastIndexOf() 数组中最后一次出现的索引
+//    如果没有这一项 返回-1
+//    var res = ary.indexOf(1000);
+//    console.log(res);
+//    var res = ary.lastIndexOf();
+//    console.log(res);
+
+//    3)forEach
+    var ary = [1,2,3,4,5,9,6,3];
+     var a = ary.forEach(function(item,index){
+        console.log(item*10,index);
+//        item  数组中每一项的值
+//        index 每一项的索引
+         return item;
+    })
+    console.log(a);//不可以输出返回值
+
+//    4)map:改变每一项的值  可以输出返回值 ????????????????
+    var r = ary.map(function(item,index){
+//        console.log(item*10,index);
+        var fg=item+1
+        console.log(fg);
+//        item  数组中每一项的值
+//        index 每一项的索引
+        return item*10;
+    })
+    console.log(r);
+    console.log(ary);
+
+
+//?????????
+
+var df=[2,4,1,5,3,5]
+    console.log(df.join(''))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

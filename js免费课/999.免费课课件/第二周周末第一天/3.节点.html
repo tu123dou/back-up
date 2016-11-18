@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head><body>
+<ul>
+    <li>1</li>
+    <li class="list2">2</li>
+    <li>3</li>
+</ul>
+<!--注释-->
+<script>
+
+    //1、获取所有的子节点
+    console.log(document.body.childNodes)
+//              nodeType  nodeName        返回
+//    元素节点    1         对应的大写标签名   null
+//    文本节点    3         #text           内容
+//    注释节点    8         #comment        内容
+//    document   9        #document      null
+
+//    2、获取子元素节点  children  不兼容
+    console.log(document.body.children)
+
+//    3、父节点  parentNode
+    console.log(document.body.parentNode);
+
+//    4、previousSibling  上一个哥哥节点
+    console.log(document.body.previousSibling);
+
+    var li2 = document.getElementsByClassName('list2')[0]
+//    5、nextSibling
+    console.log(li2.nextSibling);
+
+//    6、firstChild
+//    7、lastChild
+
+//    获取所有的子元素
+
+    var ul = document.getElementsByTagName('ul')[0];
+    /**
+     * 获取某一个元素下的所有子元素
+     * @param ele:元素
+     */
+    function getChildren(ele){
+        var ary = [];//存放获取到的子元素
+        var nodes = ele.childNodes;
+        for(var i=0;i<nodes.length;i++){
+            var cur = nodes[i];
+            if(cur.nodeType==1){
+                ary.push(cur);
+            }
+        }
+        return ary;
+    }
+    console.log(getChildren(ul))
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

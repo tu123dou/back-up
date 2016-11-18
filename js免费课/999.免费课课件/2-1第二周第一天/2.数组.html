@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //属性值
+//    数组属性名：索引
+    var ary = [1,2,3,4,5];
+    console.dir(ary);
+
+//    key:数组的索引
+//    length:'不可枚举的属性'，不进行for in循环
+    for(var key in ary){
+//        console.log(key);//0 1 2 3 4
+//        数组的属性值：
+        console.log(ary[key])
+    }
+
+//    数组：length属性 长度
+//    获取到length对应的值
+//    ary['length']
+//    ary.length
+
+
+    for(var i=0;i<ary.length;i++){
+        console.log(ary[i])
+    }
+
+    var i=0;
+    while(i<ary.length){
+        console.log(ary[i]);
+        i++;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

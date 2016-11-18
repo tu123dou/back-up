@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0px  ;
+            padding: 0;}
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+相对定位：参照物是自己原来的位置 right（距离右边的值）效果是往左移动
+         不影响其他元素
+         不改变元素自身的属性
+         层级提升（会覆盖其他元素）
+绝对定位：只要设置绝对定位就要设置top、left，不然会没有变化
+          加top和left、bottom、right时的参照物body
+          会改变元素自身的属性（行内元素可以设置尺寸和边距  和浮动相似、行内块级元素一样
+                                在没有设置尺寸时是内容的宽高 ）
+          也脱离文档流
+          也可以另设参照物，一般设置为父级元素（只需给父级设置position:relative）；如果父级元素有position:absolute或者有fixed，那么父级元素就是他的参照物不用加position:relative
+          多个并列盒子都设置了绝对定位，他们的层级关系是谁最后写就会在上一级的上面
+          <!--层布局才用定位，其他最好不要用-->
+固定定位：参照物是可视窗口
+          会改变元素自身的属性（行内元素可以设置尺寸和边距  和浮动相似、行内块级元素一样
+                               在没有设置尺寸时是内容的宽高 ）
+          脱离文档流
+
+相对定位   自己原来的位置     没有脱离文档流  没有改变元素自身的属性
+绝对定位    body              脱离文档流      改为行内块级元素          可设置参照物
+固定定位    可视窗口          脱离文档流      改为行内块级元素
+浮动                         脱离文档流      改为行内块级元素
+
+*相对定位不常用  主要用在相对自己位置发生变化时
+绝对定位常用
+z-index：
+        没有设置z—index时默认是z-index:0；数值大的就在上面
+        没有position时不能设置z-index
+        父级元素永远在子级元素的下面
+
+</body>
+</html>

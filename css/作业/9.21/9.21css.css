@@ -1,0 +1,1050 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: 12px arial,tahoma,\5b8b\4f53;
+}
+.clear:after{content: "";
+display: block;
+clear: both;height: 0;
+    overflow: hidden;}
+i{
+    font-style:normal
+}
+ul,ol{
+    list-style: none;
+}
+.topTu{
+    height: 104px;
+    background: url("12.jpg") no-repeat #8c4ce8 top;
+    display: block;
+}
+.topTu:active{
+    height: 0;
+    transition: height 0.6s ;
+}
+.main-top{
+    height: 35px;
+    border-bottom:1px solid #eee;
+    background: #f5f5f5;
+    position: relative;
+}
+.left{
+    margin-left: 89px;
+}
+.left li{
+    float: left;
+    line-height: 35px;
+    margin-right: 28px;
+}
+.icon1{
+    width: 0px;
+    height: 0px;
+    border:5px solid;
+    border-color: #bcc4c7 transparent transparent;
+    position: absolute;
+    top: 17px;
+    left: 142px;
+    z-index: 2;
+}
+.icon2{
+    width: 0;
+    height: 0;
+    border:4px solid;
+    border-color: #f5f5f5 transparent transparent;
+    position: absolute;
+    top:-5px;
+    left: -4px;
+    z-index: 2;
+}
+/*三角*/
+.icon11{
+    left: 226px;
+}
+.iconMy{
+    width: 0;
+    height: 0;
+    border:5px solid;
+    border-color: #bcc4c7 transparent transparent;
+    position: absolute;
+    top: 15px;left: 63px;
+    z-index: 2;
+    transition: transform .6s;
+    transform-origin: 50% 25%;
+}
+.my:hover .icon2{
+    border-color: #ffffff transparent transparent;
+}
+.my:hover .iconMy{
+    transform: rotate(-180deg);
+}
+.iconPhone{
+    width: 0px;
+    height: 0px;
+    border:5px solid;
+    border-color: #bcc4c7 transparent transparent;
+    position: absolute;
+    top: 17px;left: 102px;
+    z-index: 2;
+    transition: transform .6s;
+    transform-origin: 50% 0%;
+}
+/*三角位置*/
+.left,.right{float: left}
+.left>li,.right>li{
+    float: left;
+    line-height: 35px;
+}
+.right{padding-left:376px}
+.right>li{
+    margin-right:25px}
+li.my{
+    width:72px;
+    padding-left: 9px;
+    margin-right:16px ;
+    border:1px solid transparent;
+    position: relative;
+}
+.myMy{
+    width: 162px;
+    height:0px;/*hover 161*/
+    background: #fff;
+    border: 0px solid #eeeeee;/*#dddddd*/
+    overflow: hidden;/*qudiao*/
+    position: absolute;
+    top: 34px;
+    left: -1px;
+}
+.myMy img{
+    width: 49px;
+    height: 49px;
+    border: 1px solid #f7f7f7;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+i{
+    color: #666666;
+    margin-left: 20px;
+   vertical-align: 34px;
+}
+.myMy p{
+    color: #ffffff;
+    background: #ff6600;
+    width: 64px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 2px;
+    position: absolute;
+    top:33px;
+    right: 12px;
+}
+.myMy .er{
+    padding-left: 10px;
+    width: 152px;
+    background: #ffffff;
+    /*padding-top:12px ;*/
+}
+.myMy .er li{
+    float: left;
+    color: #666;  line-height: 30px;
+}
+.myMy .er .q1, .myMy .er .q2, .myMy .er .q3{
+    width: 81px;
+}
+.right .my:hover{
+   background: #ffffff;
+    border:1px solid ;
+    border-color: #dddddd #dddddd red;
+
+    /*color: orange;*/
+    /*text-decoration: underline;*/
+}
+.right li s{
+width: 81px;height: 1px;background: #eeeeee;
+   position: absolute;top: 34px;left: 0;
+}
+.right li:hover s{
+   background: #ffffff;
+  z-index: 3
+}
+.right .my:hover .myMy{
+    background: #ffffff;
+    height: 161px;
+    border: 1px solid #ddd;
+    transition:height .6s linear 0s;
+    z-index: 1;
+}
+/*第一个框动画效果*/
+.phone{
+    position: relative;
+}
+.phone div img{
+    border: 1px solid #ddd;
+    width: 360px;
+    height: 220px;
+}
+.right .phone{
+    width: 99px;border: 1px solid transparent;
+    /*#dddddd*/
+    padding-left: 29px;
+    margin-right: -10px;
+     position: relative;
+}
+/*手机苏宁*/
+.phone .code{
+    /*background: red;*/
+    position: absolute;
+    top:34px;
+    left: -51px;
+    height: 0px;
+    overflow: hidden;
+}
+.phone:hover{
+    border: 1px solid #dddddd;
+    background:#ffffff;
+}
+.phone:hover .icon2{
+    border-color: #ffffff transparent transparent;
+}
+.phone:hover .iconPhone{
+
+    transform: rotate(-180deg);
+
+
+}
+.phone:hover div{
+    height: 224px;
+    transition:height .6s linear 0s;
+    background: #ffffff;
+    z-index: 1;
+}
+/*动画效果*/
+/*开始加小图标*/
+.right b{
+    background: url("beijing.png") no-repeat;
+    width: 16px;
+    height: 14px;
+    display: block;
+    margin: 11px 6px 1px 0;
+    float: left;
+}
+.right .phone b{
+    background-position: -43px 0;
+    width: 12px;
+    height: 16px;
+    display: block;
+    margin: 9px 6px 1px 0;
+    float: left;
+    z-index: 2;
+}
+.my li:hover{
+    color:orange;
+    text-decoration: underline;
+}
+.shop span{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: orange;
+    border-radius: 50%;
+    text-align: center;
+    line-height:16px;
+    color: #ffffff;
+    position: absolute;
+    top: 3px;
+    left:60px;
+}
+.shop{
+    position: relative;
+}
+/*以下是搜索栏*/
+h1{margin-left: -9999em;
+    float: left;
+}
+.search>a{
+    width: 190px;height: 60px;
+    float: left;
+    background: url("suningbeijingtu.png") no-repeat ;
+    margin-top: 15px;
+}
+.search .jpg{
+    width:180px;
+    height:100px;
+    float:left;
+}
+.input-search{
+    position:relative;
+}
+.input-search i{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    background: url("suningbeijingtu.png") no-repeat -191px 0;
+    margin-left: 0;
+}
+input[type=text]{
+    width: 468px;
+    height: 34px;
+    border: 2px solid #ffc001;
+    margin-top: 28px;
+    float: left;
+    outline: none;
+    padding-left: 30px;
+}
+input[type=button] {
+    width: 98px;
+    height: 38px;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    background: #ffc001;
+    float: left;
+    margin-top: 28px;
+    margin-right: 39px;
+}
+.search .idImg{
+float: right;
+}
+.bottomSearch li{
+    float: left;
+    font-size: 12px;
+    color: #999999;
+    margin: 6px 11px 0 0 ;
+}
+ .bottomSearch li  a{
+    color: #808080;
+}
+a{
+    text-decoration: none;
+}
+.search h4{
+    width: 178px;
+    height: 36px;
+    background: #ffc001;
+    padding-left: 12px;
+    line-height: 36px;
+    margin-right: 22px;
+    float: left;
+}
+.search h4 a{
+    font-weight: bold;
+    font-size: 14px;
+    color:#333 ;
+    text-decoration: none;
+    font-family: "microsoft yahei";
+}
+h4:hover a{
+    text-decoration: underline;
+}
+.search .search-title li {
+    float: left;
+    font-size:14px ;
+    padding-right: 24px;
+    line-height: 36px;
+}
+.search .search-title li a{
+    color: #333;
+    font: 15px "microsoft yahei";
+}
+.search-title li:hover a{
+    color: #ff6000;
+}
+.search .search-title .hot{
+    position: relative;
+}
+.search .search-title .hot b{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    background: url("hot.png") no-repeat ;
+}
+/*轮播图*/
+.outBanner{
+    background: #6b00c0;
+    height: 455px;
+}
+.banner{
+    width: 1190px;
+    margin: 0 auto;
+    border-top: 2px solid #333;
+    position: relative;
+}
+.banner .bannerLeft{
+    width: 190px;
+    background: #f7f2fc;
+    box-shadow:  0 1px 2px rgba(0,0,0,.3);
+    border-top: 2px solid #e9e9e9;
+    position: absolute;
+    top: -2px;
+    z-index: 1;
+}
+.banner .bannerLeft>li{
+    height: 35px;
+    padding-left: 12px;
+}
+.banner .bannerLeft li>a{
+    padding-right:6px ;
+    color: #35303a;
+    font-size:13px;
+    line-height: 35px;
+    font-family: "Microsoft YaHei";
+}
+ul  a:hover {
+    color: red;
+    text-decoration: underline;
+}
+ul div a:hover{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.banner .bannerLeft i{
+    width: 0;
+    height: 0;
+    float: right;
+    border: 5px solid ;
+    border-color: transparent transparent transparent #f6fef8;
+    /*#f6fef8*/
+    margin:12px 11px 0 0;
+}
+.bannerLeft li:hover{
+    background: #f1534d;
+}                                   /*右拉hover*/
+ .bannerLeft>li:hover>a{
+    color: #ffffff;
+}
+ .bannerLeft>a:hover{
+    text-decoration: underline;
+}
+/*中间的图片*/
+.banner img{
+    width: 770px;
+    height: 455px;
+    padding-left: 190px;
+    position: relative;
+}
+.bannerMid b,.bannerMid i{
+    width: 38px;
+    height: 78px;
+    position: absolute;
+    top: 207px;
+    left: 200px;
+    background: url("indexNew-bg.png") no-repeat 0 -51px;
+}
+.bannerMid i{
+    left: 893px;
+    background-position: -43px -51px;
+}
+.bannerMid .num{
+    position: absolute;
+    top: 427px;
+    left: 490px;
+}
+.bannerMid .num li{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    float: left;
+    margin-right: 8px;
+    background: rgba(0,0,0,.6);
+    opacity: 0.6;
+    border-radius: 50%;
+}
+.bannerMid .num li a{
+    color: white;
+}
+/*右侧*/
+.banner .bannerRight{
+    float: right;
+    width:219px;
+    height: 431px;
+    margin: 10px 11px 14px 0;
+    background: #ffffff;
+}
+.banner .bannerRight .bannerRight-top{
+    width: 188px;
+    height: 25px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+    padding-top: 5px;
+}
+.banner .bannerRight .bannerRight-top a{
+    display: inline-block;
+    color: #666666;
+    line-height: 24px;
+    height: 24px;
+    width: 32px;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+.banner .bannerRight .bannerRight-top a:hover{
+    border-bottom: 2px solid red;
+}
+.banner .bannerRight .tell{
+    margin-right: 76px;
+}
+.bannerRight-center ul{
+    padding-left: 19px;
+    padding-top: 19px;
+    height: 112px;
+    overflow: hidden;
+
+}
+.bannerRight-center ul li{
+    padding-bottom:17px ;
+}
+.bannerRight-center2 ul{
+    width: 219px;
+    overflow: hidden;
+    margin-top: 4px;
+    border-top: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+}
+.bannerRight-center2 ul li{
+    width: 72px;
+    height: 60px;
+    border-right: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    float: left;
+    text-align: center;
+
+}
+.bannerRight-center2 ul li span{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("suningleft.png") no-repeat 0 0;
+    margin: 0 auto;
+    margin-top:8px ;
+    margin-bottom:3px ;
+}
+.bannerRight-center2 ul  .sprite2 span{
+    background: url("suningleft.png") no-repeat -24px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}.bannerRight-center2 ul  .sprite3 span{
+    background: url("suningleft.png") no-repeat -48px 0;
+}.bannerRight-center2 ul  .sprite4 span{
+    background: url("suningleft.png") no-repeat 0 -24px;
+}.bannerRight-center2 ul  .sprite5 span{
+    background: url("suningleft.png") no-repeat -24px -24px;
+}.bannerRight-center2 ul  .sprite6 span{
+    background: url("suningleft.png") no-repeat -49px -24px;
+}.bannerRight-center2 ul  .sprite7 span{
+    background: url("suningleft.png") no-repeat 0 -48px;
+}.bannerRight-center2 ul  .sprite8 span{
+    background: url("suningleft.png") no-repeat -24px -48px;
+}.bannerRight-center2 ul  .sprite9 span{
+    background: url("suningleft.png") no-repeat -48px -48px;
+}
+ .bannerRight-foot{
+     margin: 15px;
+ }
+.bannerRight-footTop{
+    color: #333;
+    margin: 19px 0 10px 0;
+}
+.bannerRight-foot span{
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("indexNew-bg.png") no-repeat ;
+    margin-right: 12px;
+}
+.bannerRight-foot .img1{
+    background-position:-168px -39px ;
+}.bannerRight-foot .img2{
+    background-position:-168px 0 ;
+}.bannerRight-foot .img3{
+    background-position:-88px 0 ;
+}.bannerRight-foot .img4{
+    background-position:-128px 0 ;
+}
+ /*加上hover*/
+ .search-title li:hover a{
+    text-decoration: underline;
+    color: #ff6000;
+}
+/*隐藏的盒子*/
+
+.bannerLeft .hide {
+    width: 998px;
+    height: 440px;
+    background: #ffffff;
+    border: 2px solid #f77575;
+    padding: 10px 0 0 30px;
+    position: absolute;
+    left: 190px;
+    top: 0;
+    display: none;
+}
+.hide>a{
+    display: inline-block;
+    background: #fa4c4c;
+    padding: 0 10px 0 10px;
+    line-height: 24px;
+    color: #ffffff;
+    border-radius: 12px;
+    margin-right: 25px;
+}
+.hide div {
+    margin-top: 12px;
+}
+.hide h5{
+    color: #333333;
+    float: left;
+    margin-right: 36px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.hide p{
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    width: 560px;
+    float: left;
+}
+ .hide p a{
+    color: #666666;
+     line-height: 20px;
+     padding-right: 12px;
+}
+.bannerLeft li p a:hover{
+    color: #ff6000;
+}
+.bannerLeft h5:hover{
+    color: #ff6000;
+    text-decoration: underline;
+}
+.hide p a:hover{
+    text-decoration: underline;
+}
+.bannerLeft li:hover .hide{
+    display: block;
+}
+.w1190{
+    width: 1190px;
+    margin: 0 auto;
+}
+.countryDay{
+    margin-top: 20px;
+    height: 250px;
+    background: #f20000;
+}
+.countryDay>a{
+    height: 67px;
+    display:inline-block;
+}
+.countryDay>a>img{
+    width: 1190px;
+    height: 60px;
+    padding-bottom: 7px;
+}
+.countryDay ul li{
+    width: 230px;
+    height: 150px;
+    margin-right: 10px;
+    float: left;
+}
+/*轮播图九阳*/
+.banner-out{
+    margin-top: 40px;
+    position: relative;
+}
+.banner-nine li{
+    width: 290px;
+    height: 184px;
+    padding-right: 10px;
+    float: left;
+    position: relative;
+}
+.banner-nine li .fu-gai{
+    display: none;
+    height: 184px;
+    width: 290px;
+    background:rgba(255,255,255,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-out  b{
+    display: none;
+    width:39px;
+    height: 80px;
+    position: absolute;
+    top: 70px;
+    left:0px;
+    background:url("indexNew-bg.png") no-repeat 0 -49px;
+}
+.banner-nine li:hover .fu-gai{
+    display: block;
+}
+.banner-out:hover b{
+    display: block;
+}
+.banner-out .two{
+    background-position: -42px -49px;
+    left:1150px ;
+}
+/*放心去喜欢*/
+.like-total h5{
+    font:bold 21px 'microsoft yahei';
+    padding:29px 0 17px 0
+}
+.like-left li{
+    width: 379px;
+    height: 188px;
+    border: 1px solid blue;
+    margin-top: -1px;
+
+}
+.like-left{
+    /*height: 761px;*/
+    /*761px*/
+    margin-top: 1px;
+    float: left;
+}
+.like-right{
+    width: 797px;
+    float: right;
+    margin-right: -1px;
+    margin-top: 1px;
+}
+.like-right li{
+    width: 198px;
+    height: 188px;
+    border: 1px solid #eeeeee;
+    margin-left: -1px;
+    float: left;
+    margin-top: -1px;
+}
+.like-right li:hover{
+    box-shadow: 0 0 5px rgba( 0,0,0,.9);
+    position: relative;
+    z-index: 1;
+}
+/*大牌盛宴*/
+.big>h5{
+    font:bold 21px 'microsoft yahei';
+    padding:29px 0 17px 0
+}
+.big>img {
+    width: 380px;
+    height: 278px;
+}
+.big ul{
+    float: right;
+    width: 799px;
+    margin-right: -1px;
+}
+.big ul li{
+    float: left;
+    width: 132px;height:92px;
+    margin-left: -1px;
+    border: 1px solid #eeeeee;
+    position: relative;
+}
+.big li .big-hide{
+    background: rgba(0,0,0,.7);
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 132px;
+    height: 92px;
+    display: none;
+}
+.big li .big-hide i{
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin: 5px 5px 0 0;
+    background:url("indexNew-bg.png") no-repeat -140px -39px ;
+}
+.big li .big-hide p{
+    margin-top: 28px;
+    text-align: center;
+    color: #f8f8f8;
+}
+.big li .big-hide a{
+    color: #fffcf7;
+    width: 65px;
+    height: 22px;
+    background: #fa0;
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    border-radius: 9px;
+    margin: 12px auto 0;
+}
+.big li:hover .big-hide{
+    display: block;
+}
+.spring{
+    width: 1190px;
+    height:120px;
+    display: block;
+    margin: 20px auto 31px ;
+}
+.guest>h5{
+    font:bold 21px 'microsoft yahei';
+    padding:0 0 17px 0;
+    /*display: inline-block;*/
+    float: left;
+}
+.guest>a{
+    float: right;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+.guest a i{
+    width: 16px;
+    height: 16px;
+    float: left;
+    vertical-align: middle;
+    margin-left: 0;
+    background: url("sun.png") no-repeat -21px -42px;
+    margin-right: 5px;
+}
+.guest>a:hover{
+    color: #f60;
+}
+.guest>a:hover i{
+    background-position: 0 -42px;
+}
+.guest ul{
+    margin-left: 1px;
+}
+.guest ul li{
+    border: 1px solid #eeeeee;
+    margin-left: -1px;
+    float: left;
+}
+.guest ul li img{
+    width: 160px;
+    height: 160px;
+    margin: 19px 18px 11px 19px;
+}
+.guest ul li p{
+    width: 160px;
+    margin: 0 auto;
+    height: 44px;
+}
+.guest ul li span{
+    color: #e12228;
+    font-size: 17px;
+    padding-left: 19px;
+    margin-top:6px ;
+    margin-bottom:14px ;
+    display: inline-block;
+}
+
+.guest ul li p a{
+    color: #333; line-height: 22px;
+}
+.guest ul li p:hover a{
+    color: #ff6000;
+}
+/*f1服装百货*/
+.f1{
+    margin-top: 30px;
+}
+.f1 h5{
+    font:bold 21px 'microsoft yahei';
+    padding:0 0 17px 0;
+    /*display: inline-block;*/
+    float: left;
+
+}
+.f1 ul{
+    float: right;
+}
+.f1 ul li{
+    float: left;
+    padding-left: 20px;
+    position: relative;
+    width: 49px;
+}
+.f1 ul li a{
+    color: #666666;
+}
+.f1 ul li i{
+    display: none;
+    margin-left: 0;
+    position: absolute;
+    top: 8px;
+    left: 37px;
+    border: 9px solid;
+    border-color: transparent transparent #783e18 transparent;
+}
+.f1 ul li:hover i{
+    display: block;
+}
+.f1 ul li:hover a{
+    color: #7f4925;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*列表*/
+.cloth{
+    padding-top: 6px;
+}
+.cloth .clothL{
+    width: 383px;
+    float: left;
+    position: relative;
+}
+
+.cloth .clothL>img{
+    width: 389px;
+    height: 319px;
+}
+.cloth .clothL .left-top{
+    /*height: 194px;*/
+    width: 383px;
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    top: 225px;
+    left: 0;
+}
+.cloth .clothL .left-top li{
+    width: 127px;
+    float: left;
+    /*text-align: center;*/
+    line-height: 47px;
+}
+.cloth .clothL .left-top li a{
+    margin-left: 21px;
+    /*width: 85px;*/
+    /*height: 33px;*/
+    /*overflow: hidden;*/
+    /*display: inline-block;*/
+}
+.cloth .left-top li i{
+    width: 20px;
+    height: 21px;
+    display: inline-block;
+    background: url("image/suicon.png") no-repeat -84px -21px;
+    vertical-align: middle;
+}
+.clothL .clothL-mid{
+    width: 346px;
+    height: 114px;
+    padding: 8px 18px 0 18px;
+    border-left: 1px solid #eee ;
+    border-bottom: 1px solid #eeeeee ;
+}
+.clothL .clothL-mid .mid-left{
+    width: 128px;
+    float: left;
+}
+.clothL .clothL-mid .mid-right{ width: 128px; float: right}
+.clothL .mid-left li{
+    width: 64px;
+    margin-top:9px;float: left;
+}
+.clothL li a{
+    color: #666666;
+}
+.clothL li:hover a {
+    color:#f60;
+    text-decoration: underline;
+}
+.clothL .mid-right li{
+    width: 64px;
+    margin-top:9px;float:left;
+    color:#666666;
+}
+.clothL .cloth-bot{
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.clothL .cloth-bot img{
+    width: 382px;
+    height: 145px;
+}
+.clothL .cloth-bot .hide{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 382px;
+    height: 150px;
+    background: rgba( 255,255,255,.3);
+}
+.clothL .cloth-bot:hover .hide{
+    display: block;
+}
+.clothM .clothM-top{
+    position: relative;
+    z-index: 1;
+    float: left;
+    margin-top: 6px;
+    border: 1px solid #eeeeee;
+    /*border-right: 1px solid #eeeeee;*/
+    /*border-bottom: 1px solid #eeeeee;*/
+}
+.clothM .clothM-top img{
+    width: 404px;
+    height: 291px;
+}
+.clothM .clothM-top {
+    position: relative;
+}
+.clothM .clothM-top a .hide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 404px;
+    height: 291px;
+    background:rgba(255,255,255,.5);
+    display: none;
+}
+.clothM .clothM-top :hover img{
+   opacity: 0.5;
+}
+.clothM .clothM-top i{
+    position: absolute;
+    top: 105px;
+    left: -20px;
+    width: 38px;
+    height:80px;
+    background: url("indexNew-bg.png") no-repeat 0 -51px;
+}
+.clothM .clothM-top .mid-top-angle2{
+    background-position: -43px -51px;
+    left: 346px;
+}
+.clothM .clothM-top .point{
+    width: 44px;
+    height: 18px;
+    background: rgba(0,0,0,.3);
+    border-radius: 7px;
+    position: absolute;
+    left: 179px;
+    bottom: 8px;
+}
+.clothM .clothM-top .point a{
+    margin: 5px 0 0 4px;
+    width: 8px;
+    height: 8px;
+    background: #cecece;
+    border-radius: 50%;
+    display: inline-block;
+}
+.clothM .clothImg li{
+    border-top: 1px solid #eee;
+}
+.clothM .clothImg li img{
+    width: 404px;
+    height: 145px;
+}
+.clothM .clothImg .bottom img{
+    height: 144px;
+}

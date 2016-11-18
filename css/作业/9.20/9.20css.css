@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+   font: 12px "microsoft yahei";
+}
+ul{
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+b{
+    font-weight: normal;
+}
+/*清除格式*/
+.choose{
+    width: 386px;
+    height: 50px;
+    border-bottom: 1px solid #f5f4f0;
+    line-height: 50px;
+}
+.choose a{ font-size: 20px;
+    color: #34332f;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 14px;
+}
+.choose span:active a{
+    color: orange;
+    border-bottom:2px solid orange; ;
+}
+
+.choose .one{
+    margin: 0 42px 0 70px;
+}.choose .two{
+    margin-left: 42px;
+}
+ .choose .there{
+     color: #efeeea;
+ }
+ /*标题*/
+.center{
+    font-size: 12px;
+    color: #9a9995;
+    margin: 9px 24px 0 24px;
+    padding-bottom: 24px;
+    overflow: hidden;
+    border-bottom: 1px solid #deddd9;
+}
+.center .centerTop{
+    padding-left: 37px;
+}
+.center .centerTop i{
+    background: url("9.20zuoye.png") -19px 0;display: inline-block;width: 13px;height: 13px;margin-right: 10px;vertical-align: -2px;
+}
+.center .cc input[type=text]{
+    width: 262px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    margin-top:19px;
+    padding:0 37px;
+}
+.center .cc i{
+    display: inline-block;
+    width: 19px ;
+    height:20px;
+    background: url("9.20zuoye.png");
+    position: absolute;
+    top: 27px;
+    left: 9px;
+}
+.pos{
+    position: relative;
+}
+.center .cc1 input[type=text],.center .cc1 input[type=password]{
+    width: 262px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    margin-top:19px;
+    padding:0 37px;
+}
+.center .cc1 i{
+    display: inline-block;
+    width: 19px ;
+    height:20px;
+    background: url("9.20zuoye.png")  no-repeat 0 -20px;
+    position: absolute;
+    top: 27px;
+    left: 9px;
+}
+.center .cc1 b{
+    display: inline-block;
+    width: 19px ;
+    height:20px;
+    background: url("9.20zuoye.png")  no-repeat 0 -40px;
+    position: absolute;
+    top: 29px;
+    left:309px;
+}
+.center .cc2 input[type=text]{
+    width: 96px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    margin-top:19px;
+    padding: 0 37px;
+}
+.center .cc2 i{
+    display: inline-block;
+    width: 19px ;
+    height:20px;
+    background: url("9.20zuoye.png")  no-repeat 0 -40px;
+    position: absolute;
+    top: 27px;
+    left: 9px;
+}
+.cc2{float: left}
+img{
+    width: 90px;
+    height: 40px;
+    border:1px solid #dddddf;
+    margin: 19px 19px 0 10px;vertical-align: -18px;
+}
+.auto{
+    margin: 19px 0 20px 0;
+}
+.button input[type=submit]{
+    width: 338px;
+    height: 40px;
+    border-radius: 2px;
+    background: #ff9c00;
+    font-size: 20px;
+    color: #fffdf6;
+    border:none;
+}
+.button:hover input{
+    background-color:#ffd237;
+}
+.sup{
+    font-size: 12px;
+    color: #e8993a;
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+}
+.center:hover .sup{
+   text-decoration: underline;
+    /*增加下划线*/
+}
+.forget{
+    font-size: 12px;
+    float: right;
+    color: #000000;
+    margin-top: 8px;
+    text-decoration: none;
+}
+.center:hover .forget{
+    color:#ffd237;
+}
+/*中间的*/
+div.foot{
+    position: relative;
+    padding: 22px 20px  0 20px;
+}
+.use{
+    background: #fffdf6;
+    padding: 11px 0  0 11px;
+    font-size: 12px;
+    color: #9a9997;
+    position: absolute;
+    top:-20px;
+    left: 107px;
+    margin-bottom: 22px;
+}
+li{
+    float: left;
+}
+.q li:hover i{
+    color: #ffd237;
+}
+.q:after{content: "";display: block;clear: both;
+}
+.q span{
+    margin: 0 20px;
+
+}
+.body{
+    position: absolute;
+    top: 79px;
+    left: 774px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+<script>
+    function makeArray(main){
+        var cur=[];
+        try{
+            cur=Array.prototype.slice.call(main)//元素集合不兼容ie9以下，argument兼容
+        }catch(e){
+            for(var i=0;i<main.length;i++){
+                cur.push(main[i])
+            }
+        }
+        return cur
+    }
+    var ali=document.getElementsByTagName('li');
+    console.log(makeArray(ali))
+</script>
+</html>

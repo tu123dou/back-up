@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div" style="height: 30px;background-color: red"></div>
+</body>
+<script>
+    function F() {
+        this.x = 100;
+        this.y = 200;
+        this.show = function () {
+        }
+    }
+    F.prototype.aa = function () {
+    };//原型
+    var f1 = new F;//实例
+    console.dir(f1)
+
+    /*  function S(){
+     F.call(this)
+     }
+     var s=new S;
+     console.dir(s)*/
+
+
+    /*   function S(){};
+     S.prototype=new F;
+     var s=new S;
+     console.dir(s)*/
+
+
+    /*var f=new F;
+     function S(){
+     for(var attr in new F){
+     this[attr]=f[attr]
+     }
+     }
+     var s=new S;
+     console.dir(s)*/
+
+    //call+原型链
+    /*  function S(){
+     F.call(this)
+     }
+     S.prototype= new F;
+     S.prototype.constructor=S
+     var s=new S;
+     console.dir(s)*/
+
+    //call+拷贝
+    /*    function ex(a,b){
+     for(var atter in b){
+     a[atter]=b[atter]
+     }
+     return a
+     }
+     function S(){
+     F.call(this)
+     }
+     ex(S.prototype, F.prototype);
+     var s=new S;
+     console.dir(s)*/
+
+    //混合继承三  借助一个空的{}
+    /*function S(){
+     F.call(this)
+     }
+     function T(){this.name='eer'}
+     T.prototype= F.prototype;
+     var t=new T;
+     S.prototype=t;
+     var s=new S;
+     console.dir(s);
+     t.constructor=S*/
+
+    //第三种的延伸
+    function myCreate(b) {
+        function A() {}
+        A.prototype = b.prototype;
+        return new A
+    }
+    function S() {
+        F.call(this)
+    }
+    S.prototype = myCreate(F);
+    var s = new S;
+    s.__proto__.ee = 'df'
+    console.dir(s)
+</script>
+
+</html>

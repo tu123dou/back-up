@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+1、数据类型
+基本数据类型：number string  boolean  null  undefined
+引用数据类型：
+object：{} [] //
+function
+
+2、number
+NaN
+isNaN()
+Number()
+parseInt('123px')
+parseFloat('12.5.6px')     可以多识别一个小数点.
+
+3、boolean:true  false
+![]
+任意数转为布尔类型，NaN 0 '' null undefined ---》false
+
+!! 相当于Boolean()
+
+4、=
+==
+
+5、val1==val2
+1）对象==对象  false
+2）对象==字符串  对象转为字符串
+3）对象==布尔   都转为数字
+4）对象==数字   对象转数字
+5）布尔==字符串  都转为数字
+6）布尔==数字    布尔转为数字
+7）数字==字符串   字符串转数字
+8）null==undefined  true
+9）null或者undefined和其他任意数比较 返回false
+
+转为数字
+1）对象先转为字符串（.toString()）然后再转为数字（Number()）
+2)布尔直接转数字
+3）字符串直接转为数字
+![0]==false   true
+!![]==false    false
+
+6、===严格比较  数据类型和值必须完全相同 true
+null===undefined   false
+
+7、for循环
+    1）初始值
+    2）条件
+    3）循环体
+    4）累加
+
+for(var i=0;i<5;i++){
+    循环体
+}
+
+var i=0
+while(i<5){
+    循环体
+    i++;
+}
+
+break  :跳出整个循环
+continue：本轮循环体后面的代码不再执行
+for(var i=2;i<12;i+=2){
+    if(i<6){
+        i+=3;
+        continue;
+        console.log(i)
+    }
+    i+=2;
+    break;
+}
+console.log(i)
+
+8、运算符
+>  <   >=   <=
++ - * /
+%
+==  ===
+&&   ||
+一个值：直接判断真假
+
+<script>
+    if([]||'123'||0){
+        alert(123);
+    }
+
+</script>
+
+void 0;
+
+
+switch(值){
+    case 值1:
+        值===值1
+        break;
+    case 值2:
+        值===值2
+        break;
+    ...
+    default:
+        以上都不成立执行的代码
+}
+
+9、函数
+    定义
+        function  函数名(a,b){
+            函数体：
+        }
+    执行
+        函数名(1,2)
+
+    存储参数的一个集合 arguments
+
+    return  返回值  函数执行的结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            background: red;
+        }
+        .green{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<ul id='ul1'>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    oUl=document.getElementById('ul1');
+    lis=oUl.getElementsByTagName('li');
+    /*for(var i=0;i<lis.length;i++){
+        if(i%2==0){
+            lis[i].className='red';
+        }else{
+            lis[i].className='green';
+        }
+    }*/
+    for(var i=0;i<lis.length;i++){
+        lis[i].zfpx=i
+        if(i%2==0){
+//            索引为偶数 ：奇数行
+            lis[i].style.backgroundColor = 'red';
+            lis[i].zf = 'red';
+        }else{
+            lis[i].style.backgroundColor = 'green';
+            lis[i].zf = 'green';
+        }
+        lis[i].onmouseover = function(){
+            this.style.backgroundColor = 'pink'
+        }
+        lis[i].onmouseout = function(){
+            this.style.backgroundColor = this.zf
+        }
+        lis[i].onclick=function(){
+            alert('我是第'+(this.zfpx+1)+'个li')
+        }
+//        console.log(lis[1])
+//        在类数组中可以用.item(索引)
+//        console.log(lis.item(1))
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

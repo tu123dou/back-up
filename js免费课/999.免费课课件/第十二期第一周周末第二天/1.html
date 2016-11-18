@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        .box{
+            width: 306px;
+            margin: 0 auto;
+        }
+        ul>li{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background: orange;
+            float: left;
+            text-align: center;
+            border: 1px solid plum;
+        }
+        .box div{
+            font-size: 36px;
+            display: none;
+            width: 304px;
+            height: 200px;
+            border: 1px solid red;
+            margin-top: -1px;
+            position: relative;
+        }
+        li.active{
+            background: -webkit-linear-gradient(top,lightblue,lavenderblush);
+        }
+        .box div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>
+        <li class="active">选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+    </ul>
+    <div class="active">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<script>
+    //思路
+    //    鼠标经过li时，将所有的li和div去掉active类名，让当前的li和对应的div设置active这个类名
+    //    1、获取要操作的元素
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var divs = box.getElementsByTagName('div');
+
+    //    2、实现功能：
+    function tab1(n){
+//        1)将所有的li和div的类名''
+        for(var i=0;i<lis.length;i++){
+            lis[i].className = '';
+            divs[i].className = '';
+        }
+//        2）
+        lis[n].className = 'active';
+        divs[n].className = 'active';
+    }
+
+    //    给每一个li绑定事件
+    for(var i=0;i<lis.length;i++){
+        /*(function(i){
+            lis[i].onmouseover = function(){
+//            console.log(i);
+                tab1(i);
+            }
+        })(i)*/
+        lis[i].onmouseover = (function(i){
+            return function(){
+                tab1(i);
+            }
+        })(i)
+
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

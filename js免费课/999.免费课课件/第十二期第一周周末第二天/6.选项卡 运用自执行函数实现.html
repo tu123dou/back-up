@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        .box{
+            width: 306px;
+            margin: 0 auto;
+        }
+        ul>li{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background: orange;
+            float: left;
+            text-align: center;
+            border: 1px solid plum;
+        }
+        .box div{
+            font-size: 36px;
+            display: none;
+            width: 304px;
+            height: 200px;
+            border: 1px solid red;
+            margin-top: -1px;
+            position: relative;
+        }
+        li.active{
+            background: -webkit-linear-gradient(top,lightblue,lavenderblush);
+        }
+        .box div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>
+        <li class="active">选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+    </ul>
+    <div class="active">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<script>
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var divs = box.getElementsByTagName('div');
+
+    function tab(n){
+        for(var i=0;i<lis.length;i++){
+            lis[i].className = '';
+            divs[i].className = '';
+        }
+        lis[n].className = 'active';
+        divs[n].className = 'active';
+    }
+    for(var i=0;i<lis.length;i++){
+
+//        第一种方法 最好理解
+//        lis[i].zfpx = i;
+//        lis[i].onmouseover=function(){
+//            tab(this['zfpx'])
+//        }
+//    }
+
+//        第二种方法
+//        lis[i].onmouseover = (function(a){
+//            console.log(a);       // 待执行
+//        return function() {      // return没意义但不能没有
+//                 console.log(a);  // 待执行
+//                 tab(a)
+//            }
+//        })(i)
+//
+//    }
+
+//第三种
+      (function(a){
+            console.log(a);//     for循环时就已经执行了 {利用function特点（特点：可以调用多次且结果互不影响）} 每一次i的变化，a值都会记录，a值不会被覆盖)
+            lis[i].onmouseover= function() {
+                console.log(a);//                 鼠标移过时才开始执行
+                tab(a)
+            }
+        })(i)
+    }
+
+//以下是for循环一步步的执行程序
+//    lis[0].onmouseover = (function(a){
+//    鼠标移入时  此处相当于发生 var a=i;
+//        return function(){
+//    function是封闭的 要到外面查找a的值
+//            tab(a)
+//        }
+//    })(0)  // onmouseover是一个开关，当开关打开时后面的才会执行（后面的内容是  ‘=’后面到自执行函数定义 ），自执行函数定义的作用相当于是储存i的作用 ，如同自定义属性的作用。
+//
+//    lis[1].onmouseover = (function(i){
+//        return function(){
+//            tab(i)
+//        }
+//    })(1)
+//
+//    lis[2].onmouseover = (function(i){
+//        return function(){
+//            tab(i)
+//        }
+//    })(2)
+
+
+
+    /*function a(){
+
+    }
+//    匿名函数:没有名字
+    /!*li.onclick = function(){
+
+    }*!/
+//    自执行函数  ~ + ! 都可以
+    ;(function(){
+        alert(123);
+    })()
+!(function(){
+        alert(123);
+    })()*/
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

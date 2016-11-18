@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+       #div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 30px;
+            left: 0;;;
+        }
+
+        .box1 {
+            width: 1px;
+            height: 300px;
+            background: black;
+            position: absolute;
+            left: 1000px;
+            top: 0;
+        }
+        input{
+            width: 50px;
+            height:30px;;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="左">
+<input type="button" value="右">
+<div id="div"></div>
+<div class="box1"></div>
+</body>
+<script src="js/utils.js"></script>
+
+<script>
+    var aBtn=document.getElementsByTagName('input');
+    var oLeft=aBtn[0];
+    var oRight=aBtn[1];
+    var oDiv=document.getElementById('div');
+    oRight.onclick=function(){
+        move(1000)
+    };
+    oLeft.onclick=function(){
+        move(0);
+    };
+    function move(target){
+        _move();
+        function _move(){
+            var curPos=oDiv.offsetLeft;
+            if(curPos<target){
+                if(curPos+10>=target){
+                    utils.css(oDiv,'left',target);
+                    return;
+                }
+                curPos+=10;
+                utils.css(oDiv,'left',curPos);
+            }else if(curPos>target){
+                if(curPos-10<=target){
+                    utils.css(oDiv,'left',target);
+                    return;
+                }
+                curPos-=10;
+                utils.css(oDiv,'left',curPos);
+            }else{
+                return;
+            }
+            if(curPos==500){
+                oDiv.style.background='yellow';
+            }
+            clearTimeout(oDiv.timer);
+            console.log('a');
+            oDiv.timer=setTimeout(_move,10)
+        }
+    }
+//    function move2(target){
+//        var cur=oDiv.offsetLeft
+//        if(cur<target)
+//    }
+</script>
+</html>

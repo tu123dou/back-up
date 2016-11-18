@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var ary = [8,9,7,6, 4, 2, 3, 5, 1];
+    function is(ary) {
+        var newAry = [];
+//        newAry.unshift(ary[0]);
+//        newAry[0]=ary[0];
+        newAry.push(ary[0]);
+        for (var i = 1; i < ary.length; i++) {
+            var cur = ary[i];
+
+            for (var j = newAry.length;j >= 0;) {
+                if (newAry[j] < cur) {
+                    newAry.splice(j + 1, 0, cur);
+                    break;
+                }
+//                else {     //可以有也可以没有
+                    j--;
+                    if (j === -1) {
+                        newAry.unshift(cur);
+                    }
+//                }
+            }
+        }
+        return newAry
+    }
+    console.log(is(ary))
+
+</script>
+</html>

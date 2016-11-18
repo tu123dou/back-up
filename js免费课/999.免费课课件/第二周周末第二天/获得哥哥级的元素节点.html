@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1></h1>
+<!--标题-->
+<ul id="ul"></ul>
+
+</body>
+<script>
+    var pre = ul.previousSibling
+    //while(pre&&pre.nodeType!==1){
+    //   pre=pre.previousSibling
+    //}
+    //    console.log(pre);
+
+    function pr(ul) {
+        if (ul.nodeType == 1) {
+            return ul
+        } else {
+            return pr(ul.previousSibling)
+        }
+    }
+    console.log(pr(ul.previousSibling))
+
+</script>
+</html>

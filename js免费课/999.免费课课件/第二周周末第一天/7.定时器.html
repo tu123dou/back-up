@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    //
+//    var timer1 = window.setTimeout(function(){},1000);
+////    清除定时器
+//    clearTimeout(timer1);
+//    var timer2 = window.setInterval(function(){},1000);
+////    清除定时器
+//    clearInterval(timer2);
+
+    var i=0;
+    function me(){
+        i++;
+        console.log(i);
+        if(i>=5){
+            clearTimeout(timer);
+            return;
+        }
+        var timer = window.setTimeout(me,1000);
+    }
+    me();
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

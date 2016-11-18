@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+1、基本数据类型
+number string boolean null undefined
+ 引用数据类型
+对象object：{} [] //  Date
+函数function
+2、基本数据类型操作：值
+  引用数据类型操作：内存地址
+3、
+number：NaN
+NaN==NaN  false
+将其它类型转为number类型的方法：
+Number()
+parseInt()
+parseFloat()
+
+isNaN()
+4、boolean()
+!
+false:0 NaN '' null undeined
+!!  Boolean()
+
+5、数据类型之间的比较
+    1）对象==对象 false
+    2）对象==字符串
+.toString()
+Number()
+    3)null==undefined  true
+    4)null或者undefined和其他任何类型比较 false
+6、=== 严格比较
+7、检测数据类型：
+    typeof
+    instanceof
+    constructor
+8、if
+//条件 只有一个值
+&&
+||
+    if(1/'3px'){
+        alert(1)
+    }
+<script>
+    if(1&&0&&'123'){
+        alert(1234);
+    }
+</script>
+
+[]==false  true
+![]==false   true
+1+1+'234'
+
+9、for循环
+1）初始值 2）条件 3）{循环体}  4)自增
+<script>
+    for(var i=0;i<5;i++){
+        if(i==1){
+            console.log(1)
+        }else if(i==2){
+            console.log(2)
+        }else{
+            console.log(3)
+        }
+    }
+    var i=0;
+    while(i<5){
+        switch(i){
+            case 1:
+                console.log(1);
+                break;
+            case 2:
+                console.log(2);
+                break;
+            default :
+                console.log(3);
+        }
+        i++;
+    }
+
+
+</script>
+
+10、for in
+key:属性名
+对象[key]  属性值
+for(var key in 对象){
+    对象[key]
+}
+
+11、函数
+定义+执行
+
+function 函数名(形参){
+    函数体
+}
+
+函数名(实参);
+函数名();
+
+arguments：存储参数的一个集合
+return：返回值 在函数外面接收函数中的某一个变量
+函数没有return   --》函数(); -->undefined
+
+匿名函数：没有名字的函数
+
+div.onclick = function(){
+
+}
+
+自执行函数:; + - ! ~
+;(function(){
+
+})()
+
+
+12、对象
+var obj = {name:'zfpx'}
+var obj = new Object();
+
+obj.age = 9;
+obj['age'] = 9;
+
+obj.age
+obj['age']
+
+obj.age = null
+delete obj.age
+
+div.style.backgroundColor
+
+div.className
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

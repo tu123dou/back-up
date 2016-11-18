@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border:10px solid ;
+            border-color: #fff lightseagreen lightseagreen;
+        }
+        /*div:before{*/
+            /*content: '';*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*-webkit-border-radius: 50%;*/
+            /*-moz-border-radius: 50%;*/
+            /*border-radius: 50%;*/
+            /*border:10px solid;*/
+            /*border-color: #fff transparent transparent;*/
+            /*display: block;*/
+            /*position: absolute;*/
+            /*top: -10px;*/
+            /*left: -10px;*/
+        /*}*/
+        @keyframes abc {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        div:hover{
+            -webkie-animation: abc .5s infinite linear;
+            -moz-animation: abc .5s infinite linear;
+            animation: abc .6s infinite linear;
+        }
+
+
+    </style>
+</head>
+<body style="background: #333">
+
+<div></div>
+
+
+</body>
+</html>

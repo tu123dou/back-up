@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countDown(){
+
+
+    var now=new Date;
+    var tar=new Date('2016/11/6 18:00:00');
+ /*   //或者
+    var nowT=now.getTime();
+    var tarT=tar.getTime();
+    s=(tarT-nowT)/1000*/
+    s=(tar-now)/1000;
+    var d=Math.floor(s/(24*3600));
+    var h=Math.floor((s-d*24*3600)/3600);
+    var m=Math.floor(((s-d*24*3600)-h*3600)/60);
+    var s1=Math.floor(s-d*24*3600-h*3600-m*60);
+        var str=d+'天'+h+':'+m+':'+s1;
+        document.body.innerHTML='下课'+str
+    }
+    countDown();
+    setInterval(countDown,1000)
+</script>
+</body>
+</html>

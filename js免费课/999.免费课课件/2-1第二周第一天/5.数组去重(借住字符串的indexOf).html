@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var ary = [1,2,6,1,2,3,2,1,2,2,3,5,2,1,2,2,1,1];
+//    splice(n,1) 从索引n开始删除1个
+//    ary.splice(3,1);
+//    console.log(ary);
+    var obj = '';
+/*
+    for(var i=0;i<ary.length;i++){
+        var cur = ary[i];
+        if(obj[cur]==cur){
+//            说明对象中已经存在这一项
+//            删除
+//            ary.splice(i,1);
+//       重复的位置：存储为数组的最后一项
+            ary[i] = ary[ary.length-1];
+//           将数组最后一项删除
+            ary.length--;
+//            ary.length-=1
+//            ary.length=ary.length-1
+//            ary.pop();
+            i--;
+            continue;
+        }
+        obj[cur] = cur;//将属性名和属性值 存储在obj中
+    }
+    console.log(ary)*/
+//    obj[1]=1
+//    obj[2]=2
+//    obj[6]=6
+//    obj[1]  --对象中存在这一项---将数组中这一项去掉
+//    if(obj[1]==1){
+//        //重复
+//        ary.splice(n,1)
+//    }
+
+//    obj={1:1,2:2,6:6}
+
+    for(var i=0;i<ary.length;i++){
+        var cur  = ary[i];
+        if(obj.indexOf(cur)!==-1){
+            ary[i] = ary[ary.length-1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj+=cur;
+    }
+    console.log(obj)
+console.log(ary)
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

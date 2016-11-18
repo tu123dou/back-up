@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //1-100之间  所有即能被五整除，也能被三整除的数字，相加的和
+    /*var total = null;//和
+    for(var i=1;i<=100;i++){
+//        i  1~100
+//        && 并且 两个条件都为真整体才为真
+         if(i%3==0&&i%5==0){
+             total+=i
+         }
+    }
+    console.log(total);*/
+
+   /* var total = 0;//和
+    var a = 1;
+    function add(n){
+        if(n>100){
+            return total;
+        }
+        if(n%3==0&&n%5==0){
+            total+=n;
+        }
+        return add(n+1);
+    }
+    console.log(add(a));*/
+
+    /*var total = null;
+    function fn(i){
+        if(i>100){
+            return total;
+        }
+        if(i%15==0){
+            total+=i;
+        }
+        return fn(i+1)
+    }
+    var n = 1;
+    console.log(fn(n));*/
+
+    var total = null;
+    function fn(i){
+        if(i>100){
+            return total;
+        }
+        if(i%15==0){
+            total +=i;
+        }
+        return fn(i+1);
+    }
+    var n = 1;
+    fn(n);
+
+    Math.round(Math.random()*(m-n)+n)
+
+//    数组中最后一项的索引 ary.length-1
+//    在数组末尾增加一项
+    ary.push();
+    ary.splice(ary.length,0,x);
+    ary[ary.length] = x;
+
+//    删除数组最后一项
+    ary.pop();
+    ary.length--;
+    ary.length = ary.length-1;
+    ary.length-=1;
+    ary.splice(ary.length-1,1);
+
+//    forEach map
+
+    ary.sort(function(a,b){
+        return a-b;
+    })
+
+//    第n项到第m项
+//  索引:n-1    m-1
+    ary.slice(n-1,m)
+
+
+
+
+
+
+</script>
+<div id='div1' class='box'></div>
+<script>
+    document.getElementById('div1');
+    document.getElementsByClassName('box')[0];
+    document.getElementsByTagName('div')[0];
+    document.querySelector('div')
+    document.querySelector('#div1')
+    document.querySelector('.box')
+
+    document.querySelectorAll('div')[0];
+    document.querySelectorAll('.box')[0];
+    document.querySelectorAll('#div1')[0];
+
+    var oP = document.createElement('p');
+    document.body.appendChild(oP)
+
+
+</script>
+
+</body>
+</html>

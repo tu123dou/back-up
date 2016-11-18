@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+        }
+        input {
+            width: 60px;
+            height: 30px;
+            border:1px red solid;
+            outline: none;
+        }
+        div{
+            margin-top: -1px;
+            display: none;
+            width: 178px;
+            height: 150px;
+            border:1px red solid ;
+            border-top: none;;
+        }
+        input.on{
+            border-bottom: none;
+            background-color:lightblue;
+        }
+        div.on{
+            display: block;
+            background-color:lightblue;
+        }
+    </style>
+</head>
+<body>
+<input class="on" type="button" value="按钮1"><input type="button" value="按钮2"><input type="button" value="按钮3">
+<div class="on">1</div>
+<div>2</div>
+<div>3</div>
+<script>
+    var aInput=document.getElementsByTagName('input');
+    var aDiv=document.getElementsByTagName('div');
+    for(var i=0;i<aInput.length;i++){
+        aInput[i].index=i;
+        aInput[i].onclick=function(){
+            for(var j=0;j<aInput.length;j++){
+                aInput[j].className='';
+                aDiv[j].className='';
+            }
+            this.className='on';
+            aDiv[this.index].className='on'
+        }
+    }
+</script>
+</body>
+</html>

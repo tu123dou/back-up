@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //对象由一组或多组 属性名和属性值组成  键值对 key:value
+    var obj = {
+        name:'zfpx',
+//        属性名: 属性值
+        age:8
+    }
+
+   /* var ary = [1,2,'zfpx','中文'];
+    console.log(ary);*/
+
+//    1）创建一个对象
+//    1、字面量
+    var obj = {name:'zf'}
+//    2、实例创建方式
+    var obj = new Object();
+
+//    2)增加一组属性名和属性值
+//    {name:'珠峰'}
+    obj.name = '珠峰'
+    obj['name'] = '珠峰'
+
+//    3）获取属性名对应的属性值
+    console.log(obj.name)
+    console.log(obj['name'])
+    console.log(obj)
+
+//    {name: "珠峰"}
+//    4)修改属性名对应的属性值
+    obj.name = 'zfpx'
+    obj['name'] = 'zfpx'
+    console.log(obj)
+
+//    5)删除
+//    1、假删除:直接把属性值赋值为null
+    obj.name = null;
+    obj['name'] = null;
+    console.log(obj)
+//    2、真删除
+    delete obj.name;
+    delete obj['name'];
+    console.log(obj)
+
+
+//    {1:10010}
+    obj[1] = 10010;
+//    如果属性名为数字 只能用[]的形式
+//    obj.1=10010;  错误的
+
+    console.log(obj)
+
+//    js中的对象 类 实例的区别：万物皆对象 类是对对象的一个具体的细分，实例：类中的一个具体实例
+
+//    对象数据类型： 对象类 Object  数组类 Array 正则类 RegExp  时间类 Date  Math函数 这些类中的具体的实例：{name:'zfpx'},[1,2],/\d{9}/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

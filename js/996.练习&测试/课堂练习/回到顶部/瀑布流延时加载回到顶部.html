@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            /*display: none;*/
+            position: fixed;
+            bottom:0;
+            right:0;
+            border-radius: 20% 20%;
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            color: orange;
+            font-size: 32px;
+            text-align: center;
+            line-height: 100px;
+            text-shadow: 0 0 28px #333;
+        }
+        div{
+            width: 1050px;
+            margin:10px auto;
+            overflow: hidden;
+            /*height: 2000px;;;*/
+        }
+        ul{
+            width: 200px;
+            margin: 5px;
+            float: left;
+            /*background: red;*/
+            /*height: 200px;;;*/
+        }
+        li{
+            list-style: none;
+            width:100%;
+            margin-bottom: 5px;
+            background: url("img2/default.gif") center no-repeat #ccc
+        }
+        img{
+            width:100%;
+        }
+    </style>
+
+</head>
+<body>
+<a href="javascript:;" id="a">top</a>
+<div id="div">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+</div>
+<script src="utils.js"></script>
+<script>
+    var ary1=[
+        {imgSrc:'img2/1.jpg'},
+        {imgSrc:'img2/2.jpg'},
+        {imgSrc:'img2/3.jpg'},
+        {imgSrc:'img2/4.jpg'},
+        {imgSrc:'img2/5.jpg'},
+        {imgSrc:'img2/6.jpg'},
+        {imgSrc:'img2/7.jpg'},
+        {imgSrc:'img2/8.jpg'},
+        {imgSrc:'img2/9.jpg'},
+        {imgSrc:'img2/10.jpg'}
+    ];
+    var bOk=false;
+    var timer=null;
+    var aImg=document.getElementsByTagName('img');
+    var div = document.getElementById('div');
+    console.log(document.body.scrollHeight);
+    var oUl = document.getElementsByTagName('ul');
+    //创建一个li;
+    function createLi() {
+        var oLi=document.createElement('li');
+         oLi.innerHTML = '<img src="" realImg="'+ary1[utils.rnd(0,9)].imgSrc+'" alt="">';
+        oLi.style.height=utils.rnd(100,240)+'px';
+        return oLi;
+    }
+    //创建50个li
+    function li50() {
+        for (var j = 0; j < 30; j++) {
+            var ary = utils.makeArray(oUl);
+            ary.sort(function (a, b) {
+                return a.offsetHeight - b.offsetHeight;
+            });
+            ary[0].appendChild(createLi())
+        }
+    }
+    function showImg(){
+        var scrollBottom=utils.win('scrollTop')+utils.win('clientHeight');
+        for(var i=0;i<aImg.length;i++){
+//            aImg[i].style.height=aImg[i].parentNode.style.height;//设置长度就会出现延时加载
+            if(aImg[i].offsetHeight+utils.offset(aImg[i]).top<scrollBottom){
+                lazyImg(aImg[i])
+            }
+        }
+    }
+    //加载真正的图片
+    function lazyImg(aImg){
+        if(aImg.loaded) return;//优化点--确保图片不重复加载
+        var tmpImg=new Image;
+        tmpImg.src=aImg.getAttribute('realImg');
+        tmpImg.onload=function(){
+            aImg.src=tmpImg.src;
+            aImg.loaded=true;
+            tmpImg=null;//优化点
+            aImg.parentNode.style.height='auto';
+//           aImg.parentNode.style.height='auto';//不设置auto就不会出现图片完全出来但没有图片的情况;在项目中会给图片的高度所以不用担心这种情况直接给101行设置高度就可以.
+        };
+        tmpImg.error=function(){
+            aImg.parentNode.style.background='url("img2/error.gif") center no-repeat #ccc';//直接用parentNode代表负级;
+            tmpImg=null;
+            aImg.loaded=true;
+        }
+    }
+    li50();
+    showImg();
+
+    window.onscroll = function () {
+        if(utils.win('scrollTop')>utils.win('clientHeight')){
+            a.style.display='block'
+        }else{
+            a.style.display='none'
+        }
+        //再加载50个li
+        var scrollBottom = utils.win('scrollTop') + utils.win('clientHeight');
+        showImg();
+        if (div.scrollHeight - 400 <= scrollBottom) {
+            li50();
+            console.log('b')
+        }
+        //可以停止滚动
+        if(bOk) clearInterval(timer);
+        bOk=true
+    };
+    a.onclick=function(){
+        timer=setInterval(function(){
+            if(utils.win('scrollTop')<=0){
+            clearInterval(timer);
+        }
+            var a=utils.win('scrollTop')-20;
+                utils.win('scrollTop',a);
+            bOk=false;
+        },30)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+img{
+    border:none ;
+    vertical-align: top;
+}
+.hezi{
+    background: #f5f5f5;
+}
+ul li{
+    height: 285px;
+    width: 296px;
+    display:inline-block;
+    margin-left: 14px;
+
+}
+ul img{
+    width: 296px;
+    height:180px;
+    border-top: 5px solid blue;
+}
+li div {
+    width: 296px;
+    height: 74px;
+    padding: 31px 0 0 0 ;
+    background:#ffffff ;
+}
+li div p{
+text-align: center;
+    font-size: 12px;
+    color:#333333;
+}
+li div .yiyi{
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 12px;
+}

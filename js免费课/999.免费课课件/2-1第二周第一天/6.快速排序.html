@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary = [1,2,6,5,3,8,7];
+//    快速排序
+//    获取中间这一项的索引
+    function quickSort(ary){
+
+        if(ary.length<=1){
+            return ary;
+        }
+        var cen = Math.floor(ary.length/2);
+//    获取中间这一项的值，在原数组中删掉这一项
+        var cenVal = ary.splice(cen,1)[0];
+        var left = [];
+        var right = [];
+//        console.log(ary);
+        for(var i=0;i<ary.length;i++){
+            var cur = ary[i];
+            if(cur<cenVal){
+                left.push(cur);
+            }else{
+                right.push(cur);
+            }
+        }
+//        递归：自己调用自己
+        return quickSort(left).concat([cenVal],quickSort(right))
+    }
+
+    var a = quickSort(ary)
+    console.log(a);
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

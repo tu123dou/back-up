@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.q{
+    background-color: red;
+}
+    </style>
+</head>
+<body>
+<div>1</div>
+<div class="q">3</div>
+<div>2</div>
+</body>
+<script>
+    function makeArray(oDiv) {
+        var ary = [];
+        try {
+            ary=Array.prototype.slice.apply(oDiv)
+        } catch (e) {
+            for (var i = 0; i < oDiv.length; i++) {
+                ary.push(oDiv[i])
+            }
+        }
+        return ary
+    }
+    var oDiv = document.getElementsByTagName('div');
+    var ary1=makeArray(oDiv);
+    ary1.sort(function(a,b){
+        return a.innerHTML- b.innerHTML
+    });
+    for(var i=0;i<ary1.length;i++){
+        document.body.appendChild(ary1[i])
+    }
+//    for(var i=0;i<ary1.length;i++){
+//        var ary2=[];
+//        ary2.push(ary1[i].innerHTML)
+//        ary1[i].innerHTML=''
+//    }
+//    ary2.sort(function(a,b){
+//        return a-b
+//    });
+//    for(var i=0;i<ary1.length;i++){
+//        ary1[i].innerHTML=ary1[i].apply(undefined,ary2[i])
+//    }
+    /**创建一个xml对象；
+     * 打开地址，参数（请求方式，地址，同步还是异步）
+     * 响应请求：readyState==0 未初始化 1载入 2载入完成3解析4完成解析
+     *
+     */
+
+</script>
+
+</html>

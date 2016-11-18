@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    var str='baaaadddDDDbbbbDDDDCCCCCCCccccccc'
+    str=str.split('').sort(function(a,b){return a.localeCompare(b)}).join('');
+    console.log(str);
+    //aaaabbbbbcccccccCCCCCCCdddDDDDDDD
+    var reg=/(\w)\1+/gi;
+    var str1=[];
+    var max=0;
+    var maxStr='';
+    str.replace(reg,function($0,$1){
+        if($0.length>max){
+            str1=$1;
+            max=$0.length
+        }else if($0.length==max){
+            str1+=','+$1
+        }
+    });
+    console.log(str1,max)
+</script>
+</html>

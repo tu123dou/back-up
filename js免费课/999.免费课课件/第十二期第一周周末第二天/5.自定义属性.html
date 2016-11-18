@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id='box'>
+    <input type="button" value="按钮1"/>
+    <input type="button" value="按钮2"/>
+    <input type="button" value="按钮3"/>
+    <input type="button" value="按钮3"/>
+</div>
+<script>
+    var box = document.getElementById('box');
+    var inputs = box.getElementsByTagName('input');
+//    console.log(inputs);
+    for(var i=0;i<inputs.length;i++){
+
+
+//        console.log(typeof inputs[i]);//object
+        inputs[i].zfpx = i;
+        inputs[i].onclick = function(){
+            alert(this.zfpx);
+        }
+    }
+
+  /*  var obj = {}
+    obj.name = 'zfpx'*/
+
+
+</script>
+
+</body>
+</html>

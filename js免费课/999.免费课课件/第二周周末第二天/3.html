@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="box"></p>
+<script>
+  /*  //生成四位数 在p标签中显示
+    function fn(){
+        var str = '';//存储四位数
+        for(var i=0;i<4;i++){
+            var rand = Math.round(Math.random()*9);
+            str+=rand;
+        }
+        box.innerHTML = str;
+    }
+    fn();
+//    每个一秒钟执行fn
+    var n = 0;//计算次数
+    var timer = window.setInterval(function(){
+        n++;
+        fn();
+        if(n==10){
+            clearInterval(timer);
+        }
+    },300);
+*/
+
+//    生成一个四位数字，并且把这个四位数字放到p标签中
+    function fn(){
+        var str = '';//存储四个数
+        for(var i=0;i<4;i++){
+   //        0-9之间的随机数
+            var rand = Math.round(Math.random()*9);
+            str+=rand;
+        }
+        box.innerHTML = str;
+    }
+    fn();
+//    每个一秒执行一次fn
+    var n = 0;//计数器
+    var timer = window.setInterval(function(){
+        fn();
+        n++;
+        if(n==10){
+            clearInterval(timer);
+        }
+    },1000)
+
+
+
+</script>
+
+</body>
+</html>

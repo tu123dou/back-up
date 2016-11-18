@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+
+    var ary = [6, 3, 7, 4, 2, 5,1];
+//    快速排序
+
+//    function quickSort(ary) {
+//        if (ary.length <= 1) {
+//        return ary
+//    }
+//        var cen = Math.floor(ary.length / 2);
+//        var cenValue = ary.splice(cen, 1)[0];
+//        var left = [];
+//        var right = [];
+//
+//        for (var i = 0; i < ary.length; i++) {
+//
+//            var cur = ary[i];
+//            if (cur < cenValue) {
+//                left.push(cur)
+//            } else {
+//                right.push(cur)
+//            }
+//        }
+//        return quickSort(left).concat([cenValue], quickSort(right))
+//    }
+//    console.log(quickSort(ary))
+
+//    插入排序
+/*    function insertSort(ary){
+    var newAry=[ary[0]];
+    for(var i=1;i<ary.length;i++){
+        var cur=ary[i];
+        for(var j=newAry.length-1;j>=0;){
+            if(cur<newAry[j]){
+                j--;
+                if(j==-1){
+                    newAry.unshift(cur)
+                }
+            }else{
+                newAry.splice(j+1,0,cur);
+                break;
+            }
+        }
+    }
+        return newAry
+    }
+    console.log(insertSort(ary));*/
+
+//    冒泡排序
+    for(var i=0;i<ary.length-1;i++){
+        for(var j=0;j<ary.length-i;j++){
+           if(ary[j]>ary[j+1]){
+               ary[j]+=ary[j+1];
+               ary[j+1]=ary[j]-ary[j+1];
+               ary[j]=ary[j]-ary[j+1]
+           }
+        }
+    }
+    console.log(ary)
+</script>
+</html>

@@ -1,0 +1,171 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "microsoft yahei"
+}
+ul{
+    list-style: none;
+}
+img{
+    border-top: none;
+    vertical-align: top;
+}
+i{
+    font-style: normal;
+}
+b{
+    font-weight: normal;
+}
+/*清除格式*/
+.main{
+    padding-left:19px ;
+    padding-top: 25px;
+    background: #ffffff;
+    width: 938px;
+}
+.main1 h3{
+    font-size: 18px;
+    color: #242424;
+    float: left;
+    padding-right: 164px;
+}
+.main1 li{
+    font-size: 13px;
+    color: #0c0a0b;
+    float:left;
+    padding-right:29px;
+}
+.main1 span{
+    font-size: 12px;
+    color: #858585;
+    float: right;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: red;
+}
+/*标题格式*/
+.main2-1{
+    width: 213px;height: 105px;
+}
+.main2-1 h4{
+    font-size: 12px;
+    color:#242424 ;
+}
+.main2-1 ul{
+    line-height: 24px;
+    float: left;
+    padding-top: 9px;
+    padding-bottom: 14px;
+    font-size: 12px;
+    color: #34323f;
+    border-bottom: 1px solid gray;
+ }
+.main2-1{
+    content: '';display: block;clear: both;
+}
+.main2-1 .list-left{
+    width: 101px;
+    height: 62px;
+}
+.main2-1 .list-right{
+    width: 101px;
+    height: 62px;
+}
+.main2{float: left;
+
+}
+/*左边部分*/
+.main33{
+    margin-left: 10px;
+}
+.main3{
+    width: 1000px;
+    /*margin-left: -17px;*/
+}
+.main3 li{
+    float: left;
+    width: 225px;
+    height: 170px;
+    position: relative;
+    margin-left: 17px;
+}
+.main3 li .img{
+    height: 127px;
+    width: 225px;
+}
+.main3 li .icon{
+    width: 64px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main3 li .pay{
+    width: 64px;
+    height: 18px;
+    line-height: 18px;
+    /*高度=行高  单行文字垂直居中*/
+    color: #fffcf8;
+    background: #ffb536;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    text-align: center;
+    /*文字、行内元素水平居中  必须要有宽度>内容的宽度
+    让内容在宽度内水平居中
+    */
+}
+li .pay b{
+    font-weight: bold;
+    /*文字加粗*/
+}
+.main3 li p{
+    width: 216px;
+    height:37px;
+    color: #fff;
+    line-height: 18px;
+    background: rgba(0,0,0,.3);
+    /*
+    rgba 有透明度的颜色
+    rgb(0,0,0)  黑色  #000
+    透明度  0~1     0完全透明  1完全不透明
+    点前面的0去掉
+    */
+    padding: 3px 4px 0 5px;
+    /*在ps中量整个盒子的大小
+    整个盒子的大小：内容+内边距
+    */
+    position: absolute;
+    left: 0;
+    top: 87px;
+    overflow: hidden;
+}
+.main3 li p b{
+    font-weight: bold;
+}
+.main3 li div{
+    padding: 0 5px;
+    margin-top: 5px;
+}
+.main3 li div i{
+    color: #ff743f;
+}
+li div b{
+    color: #f60;
+    /*
+    #aabbcc  #abc
+    */
+    font-size: 20px;
+    font-weight: bold;
+}
+.main3 li div s{
+    color: #999;
+    padding-left: 3px;
+}
+.main3 li div span{
+    color: #9f9f9f;
+    float: right;
+    padding-top: 8px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            position: absolute;
+            top: 90px;
+            left: 200px;;;
+            width: 50px;
+            height: 200px;
+        background: orange;;
+        }
+        #tar{
+            width: 5px;
+        ;position:absolute;
+            top:0;
+            left: 1000px;;
+            height: 500px;
+            background: red;;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+<div id="tar"></div>
+</body>
+<script>
+//    function move(target){
+//        function _move(){
+//            var curPos=oDiv.length
+//            if(curPos<target){
+//                if(curPos+10>=target){//向右走
+//                    oDiv.style.left=target+'px';
+//                    return ;
+//                }
+//                curPos+=10;
+//                oDiv.style.left=curPos+'px'
+//            }else if(curPos>target){//向左走
+//                if(curPos-10<=target){//向右走
+//                    oDiv.style.left=target+'px';
+//                    return ;
+//                }
+//                curPos-=10;
+//                oDiv.style.left=curPos+'px'
+//            }
+//        }
+//    }
+
+div.onclick=function(){
+    var duration=1000;
+    var change=800;
+    var change1=100;
+    var begin=200;
+    var time=0;
+    var timer=setInterval(function(){
+        time+=10;
+        var curPos=change/duration*time+begin;
+        var curPos1=change1/duration*time+begin;
+        div.style.left=curPos+'px';
+        div.style.top=curPos1+'px';
+        if(time>=duration){
+            clearInterval(timer);
+            return;
+        }
+    },10)
+}
+</script>
+</html>

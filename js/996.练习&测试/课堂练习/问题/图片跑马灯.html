@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #box{
+            width: 900px;
+            height: 310px;
+            border: 3px solid red;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        ul{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+        }
+        ul li img{
+            width: 300px;
+            height: 300px;
+             display: block;;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+<ul id='f'>
+    <li><img src="../../../997.课件/正式课第三周/第一天/img/1.jpg" alt=""></li>
+    <li><img src="../../../997.课件/正式课第三周/第一天/img/2.jpg" alt=""></li>
+    <li><img src="../../../997.课件/正式课第三周/第一天/img/3.jpg" alt=""></li>
+
+</ul>
+</div>
+</body>
+<script src="../../../1.封装的代码/myUtils.js"></script>
+<script>
+    var oUl=document.getElementById('f');
+    var oli=oUl.getElementsByTagName('li');
+    oUl.innerHTML+=oUl.innerHTML;
+    var curLeft=utils.getCss(oUl,'left');
+    oUl.style.width=utils.getCss(oUl,'width')*2+'px';
+    var timer=setInterval(function(){
+        if(curLeft<=-utils.getCss(oUl,'width')/2){
+            curLeft=0;
+        }
+           curLeft-=10;
+        oUl.style.left=curLeft+'px';
+    },10)
+
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" name="sex">
+<input type="radio" name="sex">
+</body>
+<script>
+    document.getElementById('box');//可以直接用id名  box，不用获取
+    console.log(document.getElementsByName('sex'));//获取表单元素
+    document.documentElement  //获取html
+    document.body  //获取body
+    var width=document.body.clientWidth;
+    var width=document.documentElement.clientWidth;
+
+    document.querySelector('div');//不兼容  都是类数组
+    document.querySelector('.box');//不兼容
+    document.querySelector('#box');//不兼容
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,983 @@
+.back{
+    background: #333;
+    border: 1px solid #030303;
+    height: 69px;
+}
+.w982{
+    width: 982px;
+    margin: 0 auto;
+}
+title{
+    position: relative;
+}
+.title a .logo{
+    width:156px;
+    height:31px;
+    text-indent: -999em;
+    background: url("../images/logo.png") no-repeat 0 0;
+    float: left;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.title .myMusic{
+    float: left;
+    margin-left: 1px;
+    position: relative;
+}
+.title .myMusic li {
+    float: left;
+    padding: 0 20px;
+    height: 69px;
+    text-align: center;
+    line-height: 69px;
+    border-left:1px solid ;
+    border-right:1px solid ;
+    margin-left: -1px;
+    border-color: transparent;
+    position: relative;
+}
+.title .myMusic .mM-four{
+    padding-right: 31px;
+}
+.title .myMusic .mM-one{
+    background: -webkit-linear-gradient(top,#212020,#383636);
+    border-color:  #030303;
+}
+.title .myMusic .mM-four:before{
+    content: '';
+    background: url("../images/hot_03.png") no-repeat 0 0 ;
+    width: 24px;
+    height: 16px;
+    position: absolute;
+    top:22px;
+    left: 92px;
+}
+.title .line{
+    height: 12px;
+    position: absolute;
+    top: 29px;
+    left: -1px;
+    border-left: 1px solid #030303;
+    /*border-right: 1px solid #414141;*/
+}
+.title .line2{
+    height: 12px;
+    position: absolute;
+    top: 29px;
+    left:68px;
+    border-left: 1px solid #030303;
+    /*border-right: 1px solid #414141;*/
+}
+.title .myMusic li:hover{
+    background: -webkit-linear-gradient(top,#4f4e4e,#1b1a1a);
+    border-color: #030303;
+}.title .myMusic .mM-one:hover{
+    background:-webkit-linear-gradient(top,#212020,#383636);
+}
+
+.title .myMusic li a{
+    color: #cccccc;
+    font-size: 14px;
+}
+/*第一行右侧*/
+.title .register{
+    float: right;
+    position: relative;
+}
+.title .register a{
+    font-size: 12px;
+    color: #787878;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 69px;
+}
+.register .triangle{
+    border: 6px solid;
+    border-color: #030303 transparent transparent transparent;
+    /*width: 0;*/
+    /*height: 0;*/
+    float: right;
+    margin-left: 10px;
+    margin-top: 32px;
+    transform-origin: 50% 25%;
+    position: relative;
+}
+
+.title .register:hover a{
+    text-decoration:underline
+}
+.title .register:hover .triangle{
+    transform: rotate(180deg);
+}
+.title input[type=text] {
+    width: 177px;
+    height: 31px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #787878;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 31px;
+    padding-left:33px;
+    background: #eaeaea;
+    margin-right: 15px;
+    float: right;
+    margin-top: 18px;
+
+}
+form{
+    float: right;
+    position: relative;
+}
+.title form i{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 28px;
+    left: 13px;
+    background: url("../images/xuebitu.png") no-repeat 0 0;
+}
+/*第一行隐藏的盒子*/
+.re-hideBox{
+    z-index: 2;
+    display: none;
+    width: 160px;
+    height: 192px;
+    border: 1px solid #000000;
+    background: #2a2a2a;
+    position: absolute;
+    top: 58px;
+    right:-14px ;
+    border-radius: 4px;
+}
+.re-hideBox i{
+    width: 18px;
+    height: 10px;
+    background: url("../images/denglu.png") no-repeat -99px 0;
+    position: absolute;
+    top:-8px;
+    right: 40px;
+}
+.re-hideBox ul li b{
+    width:20px ;
+    height: 15px;
+    display: inline-block;
+    background: url("../images/denglu.png") no-repeat 0 0;
+    vertical-align: middle;
+    margin-right: 11px;
+}
+.re-hideBox ul li{
+    height:26px;
+    padding:12px 0 0 16px ;
+    color: #cccccc;
+    font-size: 12px;
+}
+.re-hideBox ul li .weiXin{
+    background-position: -40px 0;
+}.re-hideBox ul li .QQ{
+    background-position: -20px 0;
+}.re-hideBox ul li .sina{
+    background-position: -60px 0;
+}.re-hideBox ul li .wangyi{
+    background-position: -80px 0;
+}
+.re-hideBox ul li:hover{
+    background: #353535;
+    color: #ffffff;
+}
+.register:hover .re-hideBox{
+    display: block;
+}
+/*第一行完*/
+/*开始第二行*/
+div.w982{
+    position: relative;
+}
+.catalog{
+    background:-webkit-linear-gradient(top,#c70c0c ,#b00a0a);
+    height:33px ;
+    /*border-top: 1px solid #ea1717;*/
+}
+.catalog ul{
+    margin-left: 195px;
+}
+.catalog .w982>ul li{
+    float: left;
+    padding: 0 13px 0 13px;
+    height: 20px;
+    margin:7px 36px 0 0;
+    line-height: 15px;
+    border-radius: 20px;
+}
+.catalog .w982>ul li a{
+    color: white;
+    font-size: 12px;
+}
+.catalog .w982>ul .ca-one{
+    background: #880202;
+}
+.catalog .red-tri{
+    width: 15px;
+    height: 7px;
+    background: url("../images/xuebitu.png") no-repeat -20px 0;
+    position: absolute;
+    top: -7px;
+    left: 215px;
+}
+.catalog ul li:hover{
+    background: #880202;
+}
+/*轮播图*/
+.banner{
+    background: #06355f;
+    border-top: 1px solid #000;
+}
+.banner .ban-left{
+    float: left;
+    position: relative;
+}
+.banner .ban-left>a>img{
+    width: 730px;
+    height: 338px;
+}
+/*轮播图的两个三角及其hover*/
+.banner .ban-left>i{
+    width: 37px;
+    height: 63px;
+    position: absolute;
+    top:140px ;
+    left: -55px;
+    background: url("../images/xuebitu.png") no-repeat -5px -108px;
+}
+.banner .ban-left i.ban-le-left:hover{
+    background: #052a4c url("../images/xuebitu.png") no-repeat -5px -108px;
+}
+.banner .ban-left>i.ban-le-right{
+    left: 1010px;
+    background-position:-50px -108px ;
+}
+.banner .ban-left i.ban-le-right:hover{
+    background: #052a4c url("../images/xuebitu.png") no-repeat -50px -108px;
+}
+/*轮播图点*/
+.ban-left .ban-le-point{
+    position:absolute;
+    left: 281px;
+    bottom: 13px;
+}
+.ban-left .ban-le-point li{
+    float: left;
+    margin-right: 17px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50% 50%;
+    background-color:#a7b7c5 ;
+    cursor: pointer;
+}
+.ban-left .ban-le-point li:hover{
+    background-color:#b90b0b;
+}
+/*右侧轮播图下载*/
+.ban-right{
+    float: right;
+    position: relative;
+}
+.ban-right img{
+    width: 250px;
+    height: 336px;
+    border: 1px solid #060b10;
+}
+.ban-right .button{
+    width: 213px;
+    height: 54px;
+    /*border: 1px solid #5b9df3;*/
+    background: -webkit-linear-gradient( top ,#4c89ed,#1c60be);
+    border-radius: 1px;
+    position: absolute;
+    bottom: 67px;
+    left: 18px;line-height:54px ;
+}
+.ban-right .button a{
+    color: white;
+    font-size: 22px;
+    padding-left: 71px;
+}
+.ban-right .button i{
+    width: 32px;
+    height: 32px;
+    background: url("../images/xuebitu.png") no-repeat -103px -80px ;
+    position: absolute;
+    top: 10px;
+    left: 33px;
+}
+.ban-right .button:hover{
+    background: -webkit-linear-gradient(top,#377ae8,#1954a4);
+}
+/*轮播图结束*/
+/*nav开始*/
+.nav{
+    background:#f5f5f5;
+}
+    /*左侧nav开始*/
+.left-nav{
+    width: 689px;
+    background: #ffffff;
+    float: left;
+    padding: 15px 20px 40px;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+    /*热门推荐开始*/
+.recommend{
+    margin-bottom: 32px;
+}
+.rec-top{
+    height: 39px;
+    border-bottom: 2px solid #c10d0c;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.rec-top i{
+    width: 14px;
+    height: 14px;
+    float: left;
+    background: url("../images/xuebitu.png") no-repeat -40px 0;
+    margin-top: 12px;
+}
+.rec-top h3{
+    float: left;
+    line-height: 39px;
+    margin-left: 10px;
+}
+.rec-top>h3>a{
+    color: #333333;
+    font-size: 20px;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.rec-top ul{
+    float: left;
+    margin-top: 16px;
+    margin-left: 6px;
+}
+.rec-top ul li{
+    margin-left: 14px;
+    float: left;
+    width: 38px;
+    border-right: 1px solid #cecece;
+   height: 11px;
+}
+.rec-top ul li a{
+    font: 12px  Arial, Helvetica, sans-serif;
+    color: #666666;
+    float: left;
+    margin-top: -2px;
+}
+.rec-top ul li a:hover{
+    text-decoration: underline;
+}
+.rec-top ul .rec-top-last{
+    border: none;
+}
+.rec-top>span>a{
+    color: #666666;
+    font: 12px  Arial, Helvetica, sans-serif;
+    float: right;
+    margin-right: 7px;
+    margin-top: 16px;
+}
+.rec-top>span>a:hover{
+    text-decoration: underline;
+}
+.rec-top>b{
+    width: 8px ;
+    height: 6px;
+    float: right;
+    background: url("../images/xuebitu.png")no-repeat -60px 0;
+    margin-right: 12px;
+    margin-top: 20px;
+}
+/*热门推荐内容开始*/
+.recommend .rec-nav li{
+    height: 235px;
+    width: 140px;
+    margin-right: 42px;
+    float: left;
+    position:relative;
+}
+.recommend .rec-nav li img{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 7px;
+}
+.recommend .rec-nav li>div{
+    position: absolute;
+    top: 115px;
+    left: 0;
+    border-left: 1px solid rgba(0,0,0,.6) ;
+    border-right: 1px solid rgba(0,0,0,.6) ;
+    height: 25px;
+    width: 118px;
+    background: rgba(0,0,0,.4);
+    padding: 0 10px;
+}
+.recommend .rec-nav li>div>i{
+    width: 14px ;
+    height: 11px;
+    float: left;
+    background: url("../images/xuebitu.png")no-repeat -81px 0;
+    margin:6px 5px 0 0 ;
+}
+.recommend .rec-nav li>div>span{
+    float: left;
+    font: 12px Arial, Helvetica, sans-serif;
+    margin-top:5px;
+    color: #cccccc;
+}
+.recommend .rec-nav li>div b{
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("../images/xuebitu.png")no-repeat -101px 0;
+    margin-top: 4px;
+}
+.recommend .rec-nav li>div b:hover{
+    background-position: -101px -18px;
+}
+.recommend .rec-nav li p>i{
+    float: left;
+    width: 35px;
+    height: 15px;
+    background: url("../images/xuebitu.png")no-repeat 0 -20px;
+    margin-right: 7px;
+    margin-top: 2px;
+}
+.recommend .rec-nav li p>a{
+    color: #000000;
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 7px;
+}
+.recommend .rec-nav li p>a:hover{
+    text-decoration: underline;
+}
+.rec-nav li.rec-nav-last{
+    margin-right: 0;
+}
+/*热门推荐主要内容结束*/
+/*热门推荐广告*/
+.recommend>a>img{
+    width: 689px;
+    height: 76px;
+}
+/*热门推荐结束*/
+/*新碟上映开始*/
+.left-nav .new-nav{
+    height: 157px;
+    border: 1px solid #d3d3d3;
+    width: 659px;
+    background: #f5f5f5;
+    padding: 29px 0 0 28px;
+    margin-bottom:32px ;
+}
+.left-nav .new-nav li{
+    float: left;
+    width: 129px;
+    position: relative;
+}
+.left-nav .new-nav li a img{
+    width: 98px;
+    height: 98px;
+    margin:1px 0 0 1px ;
+}
+.left-nav .new-nav li a i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 118px;
+    height: 100px;
+    background: url("../images/coverall.png")no-repeat 0 -570px;
+}
+.left-nav .new-nav li a u{
+    display: none;
+    position: absolute;
+    left: 73px;
+    top: 73px;
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("../images/xuebitu.png")no-repeat -101px 0;
+}
+.left-nav .new-nav li a:hover u{
+    display: block;
+}
+.left-nav .new-nav li a u:hover{
+    background-position: -101px -18px;;
+}
+
+.left-nav .new-nav li>p{
+    margin: 4px 0 0 0;
+}
+.left-nav .new-nav li>p>a{
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;}
+.left-nav .new-nav li>p>a:hover,.left-nav .new-nav li>b>a:hover{
+    text-decoration: underline;
+}
+.left-nav .new-nav li>b>a{
+    font-size: 12px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*新碟上映结束*/
+/*榜单开始*/
+.left-nav-list{
+    width: 685px;
+    border: 1px solid #d2d2d2;
+    padding: 1px 0 1px 1px;
+    position: relative;
+}
+.left-nav-list .list-line1{
+    width:1px ;
+    height: 470px;
+    background: #c3c3c3;
+    position: absolute;
+    top: 0;
+    left: 227px;
+    border-left: 1px solid #ffffff;
+}.left-nav-list .list-line2{
+    width:1px ;
+    height: 470px;
+    background: #c3c3c3;
+    position: absolute;
+    top: 0;
+   right: 227px;
+     border-left: 1px solid #ffffff;
+}
+.left-nav-list>ul>li{
+    float: left;
+    background: #f4f4f4;
+    width: 226px;
+    margin-right: 3px;
+}
+.left-nav-list>ul>li i.img{
+    width: 108px;
+    height: 118px;
+    float: left;
+    background: url("../images/biaoshengbang.png")no-repeat 0 0;
+}
+.left-nav-list>ul>li h4 a{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.left-nav-list>ul>li h4 a:hover{
+    text-decoration: underline;
+}
+.left-nav-list>ul>li h4{
+    margin-top:23px ;
+    /*float: left;*/
+}
+.left-nav-list>ul>li s.play{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: url("../images/xuebitu.png")no-repeat 0 -40px;
+    margin-top: 9px;
+    margin-right: 4px;
+}
+.left-nav-list>ul>li .play:hover{
+    background-position:0 -62px ;
+}
+.left-nav-list>ul>li .collect{
+    width: 20px;
+    height: 19px;
+    display: inline-block;
+    background: url("../images/xuebitu.png")no-repeat -32px -42px;
+    margin-top: 9px;
+}
+.left-nav-list>ul>li .collect:hover{
+    background-position:-32px -62px ;
+}
+.left-nav-list .song li{
+    width: 199px;
+    padding-left: 24px;
+    height: 32px;
+}
+.left-nav-list .song li:nth-child(odd){
+    background: #e8e8e8;
+}
+.left-nav-list .song li span{
+    text-align: center;
+    width: 17px;
+    float: left;
+    color: #666666;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align:-2px;
+    margin-right: 9px;
+}
+
+.left-nav-list .song li>a{
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    display: inline-block;
+    /*width: 94px;*/
+    overflow: hidden;
+    color: #000000;
+    font-size: 12px;
+    line-height: 32px;
+}
+.left-nav-list .song li div{
+    float: right;
+    display: none;
+}
+.left-nav-list .song li:hover div{
+    display: block;
+}
+.left-nav-list .song li:hover>a{
+    width:94px;
+}
+.left-nav-list .song li s.save{
+    width: 16px;
+    height: 17px;
+    float: right;
+    background: url("../images/xuebitu.png") no-repeat -50px -197px;
+    margin: 7px 13px 0 0;
+}
+.left-nav-list .song li s.save:hover{
+    background-position:-50px -214px ;
+}
+.left-nav-list .song li b.add{
+    width: 33px;
+    height: 17px;
+    float: right;
+    background: url("../images/xuebitu.png") no-repeat -17px -197px;
+    margin: 7px 0 0 0;
+}
+.left-nav-list .song li b.add:hover{
+    background-position:-17px -214px ;
+}
+.left-nav-list .song li i.play{
+     width: 17px;
+     height: 17px;
+     float: right;
+     background: url("../images/xuebitu.png") no-repeat 0 -197px;
+    margin: 7px 0 0 0;
+ }
+.left-nav-list .song li i.play:hover{
+    background-position:0 -214px ;
+}
+.song a:hover{
+    text-decoration: underline;
+}
+.left-nav-list ul>li>p{
+    padding-right: 29px;
+    height: 30px;
+    background:#e8e8e8 ;
+}
+.left-nav-list ul>li>p span{
+    font: 12px/30px Arial, Helvetica, sans-serif;
+    color: #000;
+    float: right;
+}
+.left-nav-list ul>li>p a{
+    float: right;
+}
+.left-nav-list ul>li>p a:hover span{
+    text-decoration: underline;
+}
+/*body{*/
+    /*height: 3000px;*/
+/*}*/
+/*榜单结束*/
+/*左侧nav结束*/
+/*右侧nav开始*/
+.right-nav{
+    width: 250px;
+    border-right: 1px solid #d4d4d4;
+    background: #fff;
+    height: 1509px;
+    float: right;
+}
+.right-nav .r-nav-register{
+    height: 109px;
+    background: -webkit-linear-gradient(top, #fdfdfd ,#e1e1e1);
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.right-nav .r-nav-register p{
+    margin: 16px 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.right-nav .r-nav-register>a{
+    display: block;
+    width: 98px;
+    height: 28px;
+    border: 1px solid #bd0d13;
+    background: #e2171f;
+    border-radius: 4px;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: center;
+}
+.right-nav .r-nav-register span{
+    color: #ffffff;
+    font-size: 12px;
+}
+/*入驻歌手*/
+.w250{
+    width: 210px;
+    margin: 0 auto;
+    padding:0 20px
+}
+.r-nav-title {
+    margin-top: 20px;
+    height: 20px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+.r-nav-title i{
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+}
+.r-nav-title a{
+    font-size:12px ;
+    color: #666666;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.right-nav .r-nav-singer li{
+    width: 210px ;
+    height: 60px;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 14px;
+    background: #fafafa;
+}
+.right-nav .r-nav-singer li:hover{
+    background:#f4f4f4
+}
+.right-nav .r-nav-singer li img{
+    width: 62px;
+    height: 62px;
+    float: left;
+    margin-right:14px ;
+}
+.right-nav .r-nav-singer li div{
+    float: left;
+}
+.right-nav .r-nav-singer li i{
+    color:#333333;
+    font-size: 14px;
+   display: inline-block;
+    margin-top: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.right-nav .r-nav-singer li p{
+    color:#666666;
+    font-size: 12px;
+    /*float: left;*/
+    margin-top: 12px;
+}
+.right-nav div.w250>a{
+    display: block;
+    width: 208px;
+    height: 28px;
+    border: 1px solid #c4c4c4;
+    background: -webkit-linear-gradient(top, #fefefe,#f1f1f1);
+    border-radius: 4px;
+    line-height: 28px;
+    text-align: center;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.Dj li{
+    height: 40px;
+    margin-bottom: 10px;
+}
+.Dj li img{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.Dj li>div{
+    padding-left: 10px;
+    float: left;
+    /*padding-top: 5px;*/
+    height: 40px;
+}
+.Dj li>div a{
+    color: #000000;
+    font-size: 12px;
+    margin-right: 4px;
+    /*vertical-align: top;*/
+}
+.Dj li>div i{
+    width: 11px;
+    height: 12px;
+    display: inline-block;
+    background: url("../images/xuebitu.png")no-repeat -40px -20px;
+    vertical-align: -1px;
+}
+.Dj li>div p{
+    width: 154px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666666;
+    font-size: 12px;
+    margin-top: 7px;
+}
+/*nav部分结束*/
+/*footer开始*/
+.footer{
+    position: relative;
+    height: 124px;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    background:#f9f9f9 ;
+    margin-top: -1px;
+    z-index: 1;
+}
+.footer div.w982{
+    padding-left: 6px;
+    padding-top: 32px;
+}
+.footer ol{
+    float: left;
+}
+.footer ol li{
+    float: left;
+    width:297px
+}
+.footer ol li i{
+    width: 35px;
+    height: 36px;
+    float: left;
+    background: url("../images/xuebitu.png") no-repeat -60px -40px;
+    margin-right: 13px;
+}
+.footer ol li div{
+    float: left;
+}
+.footer ol li p{
+    color: #666666;
+    font-size: 12px;
+}
+.footer ol li b{
+    color: #999999;
+    font-size: 12px;
+    margin-top: 6px;
+    display: block;
+}
+.footer ol .footer-two i{
+    background-position: -100px -40px;
+}
+.footer-right a{
+    color: #666666;
+    font-size: 12px;
+}
+.footer-right a:hover{
+    text-decoration: underline;
+}
+.footer-right{
+    color: #9b9b9b;
+    font-size: 12px;
+}
+.footer-right p{
+    margin-top: 6px;
+}
+.footer-right>p>i{
+    width: 19px;
+    height: 17px;
+    display: inline-block;
+    background: url("../images/xuebitu.png") no-repeat -73px -231px;
+    vertical-align: middle;
+}
+.button-top{
+    width: 45px;
+    height: 40px;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    background: #f4f4f4;
+    position: fixed;
+    top: 397px;
+    right: 126px;
+    cursor: pointer;
+    z-index: 999;
+}
+.button-top i{
+    position: absolute;
+    top: 7px;
+    left: 19px;
+    width: 7px;
+    height: 4px;
+    background: url("../images/xuebitu.png") no-repeat -20px -90px;
+}
+.button-top p{
+    margin-top:22px ;
+    font-size: 12px;
+    text-align: center;
+}
+.button-top:hover{
+    background: #ededed;
+}
+/*播放器*/
+.out{
+    position: fixed;
+    bottom: -80px;
+    left: 0;
+    z-index: 888;
+    transition: bottom .3s
+}
+.player{
+    width: 5000px;
+    background: #383838;
+    height: 100px;
+    border: 1px solid #000000;
+    position: relative;
+    z-index: 900
+}
+.out i{
+    width: 50px;
+    height: 17px;
+    position: fixed;
+    bottom:20px ;
+    right: 23px;
+    background: url("../images/xuebitu.png") no-repeat -83px -197px;
+    z-index: 3;
+    transition: bottom .3s
+
+}
+
+.out:hover{
+    bottom: 0;
+}
+.out:hover .player img{
+   display: inline-block;
+}
+.out:hover i{
+    bottom: 100px;
+}
+.out .player h5{
+    margin-top: 20px;
+    margin-left: 600px;
+    color: #ffffff;
+    display: inline-block;
+}
+.out .player img{
+    width: 360px;
+    height: 100px;
+    display: none;
+}

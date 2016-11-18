@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+       html,body{
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="box" style="background-color: white">
+<script>
+    var oBody =document.getElementById("box" );
+//              获取元素范围.获取元素通过Id
+    oBody.onclick =function(){
+       var bg=oBody.style.backgroundColor
+        console.log(bg)
+//        if(bg=="white"){
+//           oBody.style.backgroundColor='black';
+        ****不能写成bg="black"****
+//        }
+//        else{
+//            oBody.style.backgroundColor='white';
+//        }
+bg=="white" ? oBody.style.backgroundColor='black':oBody.style.backgroundColor='white';
+//        获取行内样式
+    }
+//    onmouseover 鼠标移入 onmouseout鼠标移出
+
+        /*要操作谁就获取谁；
+     body绑定点击事件；
+     点击时换背景颜色
+     */
+
+</script>
+</body>
+</html>

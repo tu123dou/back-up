@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+1）增加删除替换
+    1、push()  在末尾增加一项
+    2、pop()  删除最后一项
+    3、unshift()  在最开始增加一项
+    4、shift()   删除第一项
+    5、splice(n,m)   从索引n开始删除m个
+       splice(n,m,x)  从索引n开始删除m个，用x替换删除的内容
+       splice(n,0,x)  在索引n前面增加x
+
+2）截取和拼接
+    slice(n,m)  从索引n开始截取到索引为m处 不包括m
+    找到[第n项，第m项]之间的内容，原数组不变
+    slice(n-1,m)
+
+克隆：slice(0)\slice()
+     splice(0)
+     ary.concat()
+
+3)转为字符串
+    toString()
+    join('+')
+    eval('字符串')  将字符串转为js代码执行
+4)排序
+    sort()  只能计算9以内的排序
+    sort(function(a,b){
+        return a-b;//从小到大
+        return b-a;//从大到小
+    })
+
+    reverse()  将数组翻转
+5)不兼容
+    indexOf(内容) 判断有没有出现这个内容，如果没有出现返回-1
+    forEach(function(item,index){
+
+    })
+    map(function(item,index){
+
+    })
+数组中最后一项的索引  ary.length-1
+删除数组中的最后一项
+    pop()
+    splice(ary.length-1)
+    splice(ary.length-1,1)
+    ary.length--;
+    ary.length-=1;
+    ary.length = ary.length-1;
+克隆：slice(0)\slice()
+    splice(0)
+    ary.concat()
+在数组末尾增加一项
+    push(x)
+    splice(ary.length,0,x)
+    ary[ary.length] = x;
+
+
+<script>
+    var ary = [1,2,3,4,5];
+//             0  1 2 3 4
+    for(var i=0;i<ary.length;i++){
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

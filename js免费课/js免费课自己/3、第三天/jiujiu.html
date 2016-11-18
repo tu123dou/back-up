@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            margin-left: 10px;   background: orange;
+
+        }
+        li{list-style: none;
+
+            height: 20px;
+        line-height: 20px;
+        }
+        .bg1{
+            background: lightblue;
+        }
+        .bg2{
+            background: lightslategray;
+        }
+    </style>
+</head>
+<body>
+<div id="box" ></div>
+</body>
+<script>
+    var str='';
+    str+='<ul>';
+    for(var i=1;i<=9;i++){
+        str+='<li>';
+        for(var j=1;j<=i;j++){
+//           str+='<span>';
+//            str+=j;
+//            str+="*";
+//            str+=i;
+//            str+="=";
+//            str+=i*j;
+//            str+='</span>'
+            str+='<span>'+j+'*'+i+'='+i*j+'</span>';
+        }
+        str+='</li>';
+
+    }
+    str+='</ul>';
+    console.log(str);
+//console.log(i);
+var box=document.getElementById('box')
+box.innerHTML=str;
+var lis=box.getElementsByTagName('li');
+    for(var m =0;m<lis.length;m++){
+        if(m %2==0){
+            lis[m].className='bg1'
+        }else{
+            lis[m].className='bg2'
+        }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            font-size: 36px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 100px;
+            transition: transform .3s;
+        }
+        body:hover div{
+            /*transform: rotate(-90deg);*/
+            /*rotate 旋转*/
+            /*transform:scale(3,3) ;*/
+            /*scale 缩放   倍数
+            1）横向
+            2）纵向
+            */
+            /*transform: translate(-50px,0);*/
+            /*translate  移动  1）水平2）竖直*/
+            /*transform: rotateY(180deg);*/
+            /*rotateX  翻转  x轴方向
+            rotateY         y轴方向
+            */
+            /*backface-visibility:hidden;*/
+            /*背面不可见*/
+
+            transform: skew(20deg,-45deg);
+            /*skew  扭曲  1)x轴  2）y轴*/
+
+            /*旋转的中心点*/
+            transform-origin: 50% 50%;
+            /*相对盒子的宽高百分比*/
+
+
+        }
+
+
+    </style>
+</head>
+<body >
+
+<div>珠峰培训</div>
+
+<style>
+    p{
+        width: 100px;
+        height: 100px;
+        background: orangered;
+        animation: a 2s linear 2;
+        /*infinite  重复
+        linear  匀速
+        ease-in  加速
+        ease-out  减速
+        ease-in-out
+        */
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    @keyframes a {
+        /*from {
+            background: orangered;
+        }
+        to{
+            background: yellow;
+        }*/
+        25%{
+            background: lightblue;
+            left: 100px;
+        }
+
+        50%{
+            background: red;
+            left: 200px;
+        }
+        75%{
+            background: blue;
+            left: 300px;
+        }
+        100%{
+            background: black;
+            left: 400px;
+        }
+    }
+</style>
+
+<p></p>
+
+</body>
+</html>

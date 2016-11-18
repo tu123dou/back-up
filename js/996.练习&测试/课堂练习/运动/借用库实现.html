@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            position: absolute;
+            top: 90px;
+            left: 200px;;;
+            width: 50px;
+            height: 200px;
+            background: orange;;
+        }
+        #tar{
+            width: 5px;
+            position:absolute;
+            top:0;
+            left: 1000px;;
+            height: 500px;
+            background: red;;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div"></div>
+<div id="tar"></div>
+</body>
+<script src="myUtils.js"></script>
+<script src="move.js"></script>
+<script>
+animate(div,{left:1000,top:400,background:'red'})
+</script>
+</html>

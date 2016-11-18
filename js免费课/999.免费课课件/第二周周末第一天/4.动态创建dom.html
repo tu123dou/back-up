@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //1、创建一个元素 document.createElement('标签名')
+   /* var oLi=document.createElement('li');
+    oLi.innerHTML='dfdf';*///可以增加内容
+//    2、父元素.appendChild 添加元素 在元素最末尾的位置增加一个元素
+//    3、父元素.insertBefore(a,b) 在b元素前面添加a
+//    4、父元素.removeChild  移除子元素
+//    5、父元素.replaceChild(新的，旧的)  替换,新的替换旧的
+//    6、要克隆的元素.cloneNode(true)  克隆
+//         true将元素的子子孙孙的标签全部克隆  false表面克隆
+
+//    oP.setAttribute('name','username');
+//    var a = oP.getAttribute('name')
+
+
+//    创建一个div元素
+    var oDiv = document.createElement('div');
+//    给oDiv设置行内样式的宽度
+    oDiv.style.width = '200px';
+    oDiv.style.height = '200px';
+    oDiv.style.backgroundColor = 'red';
+
+//    appendChild 添加元素 在元素最末尾的位置增加一个元素
+    document.body.appendChild(oDiv);
+
+//    创建一个p标签
+    var oP = document.createElement('p');
+    oP.style.width = '100px';
+    oP.style.height = '100px';
+    oP.style.backgroundColor = 'blue';
+
+//    父元素.insertBefore(新的,旧的) 在元素前面添加
+    document.body.insertBefore(oP,oDiv);
+    oDiv.parentNode.insertBefore(oP,oDiv);
+
+//    removeChild  移除子元素
+    document.body.removeChild(oP);
+
+//    replaceChild(新的，旧的)  替换
+    document.body.replaceChild(oP,oDiv);
+
+//    cloneNode  克隆
+    var p1 = oP.cloneNode(true);//true 将元素的子子孙孙的标签全部克隆
+//    false： 只克隆当前的元素
+    document.body.appendChild(p1);
+
+
+//    给元素增加属性的方法
+//    设置id名字
+//    oP.dd = 'p1';
+//    设置属性 name：username
+//    使用setAttribute不能设置class
+    oP.setAttribute('class','red');
+    console.log(oP.getAttribute('id'));
+
+//    自定属性
+    oP.zf = 'zfpx';
+
+    console.log(oP);
+    console.log(oP.zf);
+    console.log(oP.class)//
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

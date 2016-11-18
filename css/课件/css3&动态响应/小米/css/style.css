@@ -1,0 +1,51 @@
+.nav{
+    width: 1226px;
+    margin: 0 auto;
+}
+.nav ul>li{
+    float: left;
+    margin-right: 20px;
+    line-height: 100px;
+    font-size: 14px;
+}
+.nav ul>li>a{
+    color: #333;
+
+}
+.nav ul>li>a:hover{
+    color: #f60;
+}
+.hide{
+    height: 0;
+    border-top:1px solid transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    /*相对参照物宽度的百分比*/
+    transition: all .3s;
+}
+.nav ul>li:hover .hide{
+    height: 229px;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.hide div{
+    width: 1226px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

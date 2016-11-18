@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            width: 1500px;
+            border:1px solid red;
+            margin:0 auto;
+            border-radius: 16px;
+            padding:0;
+        }
+        li{
+            height: 60px;
+           line-height: 60px;
+            margin:0;
+            padding:0;
+            text-align: center;
+
+        }
+        .bg1{
+            background: red;
+        }
+        .bg2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li>item1</li>
+    <li>item1</li>
+    <li>item1</li>
+    <li>item4</li>
+    <li>item1</li>
+    <li>item1</li>
+    <li>item1</li>
+    <li>item1</li>
+    <li>item9</li>
+    <li>item1</li>
+    <li>item1</li>
+    <li>item12</li>
+</ul>
+</body>
+<script>
+//    var oUl =document.getElementById("box");
+    var Lis=document.getElementsByTagName("li");
+    console.log(Lis[0]);  //    获取变量名为0的li
+    console.log(Lis["length"]);  //    获取长度
+for(var i= 0;i<Lis.length;i++){
+//    Lis[i] 获得每一个li
+//    除以2余数为1是奇数
+//    9%2  模 返回余数 1
+    if(i%2==0){
+//        Lis[i].className='bg1'
+        Lis[i].style.backgroundColor="blue"
+
+    }else{
+        Lis[i].className='bg2'
+    }
+
+}
+
+
+</script>
+</html>

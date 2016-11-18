@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="bt" type="button" value="过滤" style="height: 50px">
+</body>
+<script>
+ /*str='wqqwwewwwee';
+str=str.split('').sort(function(a,b){return a.localeCompare(b)}).join('');
+ var max=0;
+ var maxStr='';
+    str.replace(/(\w)\1+/gi,function($0,$1){
+        if($0.length>max){
+            max=$0.length;
+            maxStr=$1;
+        }else if($0.length==max){
+            maxStr+=','+$1
+        }
+    });
+    console.log(max)*/
+
+/* var strCode='2016-6-23 0:41:30';
+ /!*var ary=[];
+ var reg1=/\d+/g;
+// var ary=[2016,11,6,11,11];
+// var str='{0}年{1}月{2}日 {3}时{4}分';
+// var reg=/{(\d)}/g
+   strCode.replace(reg1,function(){
+        console.log(arguments);
+        ary.push(arguments[0])
+    } )
+    console.log(ary)*!/
+    String.prototype.forMatDate=function (tmp){
+     var ary=this.match(/\d+/g);
+        var tmpStr=tmp||'{0}年{1}月{2}日 {3}时{4}分';
+        var reg=/{(\d)}/g;
+       tmpStr=tmpStr.replace(reg,function(){
+//            console.log(arguments);
+           var n=ary[arguments[1]];
+           n=n>=0&&n<10?'0'+Number(n):n;
+            return n
+        } );
+        return tmpStr;
+ };
+     var strCode='2016-6-23 0:41:30';
+    console.log(strCode.forMatDate())*/
+
+
+    var str='fdfd?name=sfjfh&qq=dfdjkhdkd&qqq=ddgdgdg'
+    String.prototype.que=function(){
+        var reg=/([^=&?]+)=([^=&?]+)/g;
+        var obj={};
+        this.replace(reg,function($1,$2,$3){
+//            console.log(arguments)
+            obj[$2]=$3
+        });
+        return obj
+    };
+  console.log(str.que())
+
+</script>
+</html>

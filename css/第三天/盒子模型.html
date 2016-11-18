@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+内边距：内容与盒子边框之间的距离 padding
+外边距：盒子与盒子边框之间的距离 margin
+边框： border
+内容的：width宽度  height高度
+一个盒子的总宽度为border-left + padding-left + width + padding-right + border-right
+
+margin兼容问题：
+    （1）特殊 *上下结构的盒子，上边的盒子设置margin-bottom，下边的盒子设置margin-top，这时他们之间的距离谁大取谁
+    左右结构的盒子，他们之间的距离是加
+    （2）父级元素没有设置padding-top或者border-top父子级元素之间，父级元素的 第一个 子级元素设置了margin-top，这时会将margin-top的值传递给父级元素的margin-top
+    *给父级设置over-flow:hidden既可以避免传递给父级
+    (3)在ie6下，浮动块级元素 设置水平margin值，会出现双倍边距的bug
+        设置diaplay：inline
+    *能用padding就不用margin
+不同值的时候代表哪：
+    margin 上下；左右
+    margin 上；左右；下
+    margin 上；右；下；左
+border: 1px solid red; dotted点状线 dashed虚线
+行内元素设置margin只有水平方向有效     padding只可以设置水平方向；块级元素和行内块级元素可以
+去掉所有标签自带样式：margin：0;padding:0
+
+</body>
+</html>

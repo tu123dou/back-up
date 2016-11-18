@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="测试.css"/>
+</head>
+<body>
+1.标签选择器 如div{} p{} <!--权重1-->
+    在head中<style> 标签名{ 属性名:属性值；} </style>
+2.类class选择器  class名字可以相同，名字不能以数字开头，不能用中文 <!--权重10-->
+   在head中 <style> .任意{ }  </style>
+    <div class="任意">嫡女</div>
+    <div>嫡女2</div>
+3.ID选择器  id名字不能重复 <!--权重100-->
+    #id的名字
+在head中 <style> #id的名字{ }  </style>
+4.通配符选择器  特 点；作用所有标签
+在head中 <style> *{ }  </style>
+
+<!--5.优先级-->
+  <!--id选择器》类选择器》标签选择器-->
+<!--6.可以给一个标签设置多个类名，类名之间用空格隔开-->
+5.后代选择器 (可以隔代)（用空格隔开）
+    ul li span =ul span=li span
+ul、span也可以用ul、span的类名或id名代替
+6.子代选择器 (不可以隔代)（用>隔开）
+    ul>li>span
+ul、span也可以用ul、span的类名或id名代替
+7.交集选择器 <!--权重11-->增加权重
+    li .类名{}
+8.并集选择器 （用逗号隔开）
+    使不同标签可以实现同一格式
+    如div,span
+9.类型选择器
+input[type=text]{  }
+
+如<input type="text"/>
+  <input type="password"/>
+10.伪类选择器
+:hover{} <!--鼠标经过是的样式-->
+<style>a:hover{color:blue;text-decoration:none; }</style>   <!--鼠标经过是的样式-->
+<a href="">网址名字</a>
+</body>
+</html>

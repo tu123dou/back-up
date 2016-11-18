@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+会填充到padding
+background-image:url("图片路径")
+    默认平铺（重复），会填充到border
+background-repeat: no-repeat  图片设置不平铺（不重复）从边框内部开始填充的
+background-repeat: repeat-x   水平方向设置平铺（重复）
+background:red 也会填充到border
+background-position: top  center显示到的方位（前提是设置为不平铺）
+                        center竖直和水平都居中
+                        top（right）边上居中
+                        top right右上角显示
+                        可以设置两个方向
+                        也可以设置具体的值第一个值是水平方向第二个是竖直方向（正数是右、下：设置为0,0时是从border开始的）
+background-size:50% 50% （或者是像素） 50%指的是相对盒子的大小(沾满盒子的一般) cover填满盒子；contain宽高比锁定
+可以把属性值写在一起 一般的顺序   颜色  路径 是否重复 背景图片的位置（写在一起会覆盖之前的background的设置 如颜色 位置）
+background-attachment：fixed 固定 参照物是可视窗口
+</body>
+</html>

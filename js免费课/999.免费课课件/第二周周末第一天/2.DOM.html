@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box" class="box"></div>
+<input type="radio" name="sex"/>
+<input type="radio" name="sex"/>
+<script>
+    //获取html中元素
+    var oDiv = document.getElementById('box');
+
+//    getElementsByClassName  不兼容ie6-ie8
+    var oDiv = document.getElementsByClassName('box')[0];
+    var oDiv = document.getElementsByTagName('div')[0];
+//    querySelector  只能获取一项
+    var oDiv = document.querySelector('div');
+    var oDiv = document.querySelector('#box');
+    var oDiv = document.querySelector('.box');
+
+//    querySelectorAll 获取一组元素
+    var oDiv = document.querySelectorAll('div')[0];
+    var oDiv = document.querySelectorAll('.box')[0];
+    var oDiv = document.querySelectorAll('#box')[0];
+
+
+    console.log(oDiv);
+
+//    getElementsByName  常用于表单元素
+    var inputs = document.getElementsByName('sex');
+    console.log(inputs)
+
+//    body
+    document.body
+//    html
+    document.documentElement
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

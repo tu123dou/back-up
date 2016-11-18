@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //返回值
+   /* function sum(a,b){
+        var total = null;
+        total = a+b;
+//        return total;//函数执行的结果  阻断代码total
+//        console.log(123);
+    }*/
+//    sum(1)
+//    a=1  b=undefined
+//    1+undefined=NaN
+//    console.log(total);
+//    total is not defined
+//    console.log(sum(1));//没有返回值 输出undefined
+
+
+//    arguments:参数的集合  函数天生自带的属性 --》内置属性
+//    length  类数组的长度
+    var total = null;
+    function sum(){
+//        console.log(arguments);//类数组
+//        console.log(arguments.length)
+
+        for(var i=0;i<arguments.length;i++){
+//            传递进来的每一项
+            var cur = parseFloat(arguments[i]);
+            if(!isNaN(cur)){
+                total +=cur;
+            }
+        }
+        return total;
+
+    }
+    console.log(sum(1,2,3,'4','4.5px','zfpx'));
+
+
+
+
+
+</script>
+
+</body>
+</html>

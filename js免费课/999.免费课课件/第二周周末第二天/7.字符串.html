@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    chartAt
+
+    var str = 'a+b+c+d+e+f';
+//    str.charAt(1);
+    str[1];
+    str.charCodeAt(1);//Unicode编码
+
+    str.substr(1,3);//(n,m) m个
+    str.substring(1,3);
+    str.slice(1,-3);
+
+    str.indexOf('a');//判断是否存在  不存在：-1  完全兼容
+    str.lastIndexOf('a')
+
+//split('分隔符')
+//    console.log(str.split('+'));
+
+    var ary = [1,2,3,4];
+    console.log(ary.join('+'));
+
+    var str = 'abc';
+//replace(旧，新)
+    console.log(str.replace('a','A'));
+
+
+
+//    pop  push  shift unshift
+    splice(n,m)  //删除
+    splice(n,0,x)  //增加
+    splice(n,m,x)  //替换
+    splice(0)  //克隆
+
+    slice(n,m)
+    slice(n)
+    slice(0)  slice()//克隆
+    ary.concat()
+
+    toString()
+    join()
+
+    sort()
+    reverse()
+
+    forEach()
+    map
+    indexOf(内容)
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

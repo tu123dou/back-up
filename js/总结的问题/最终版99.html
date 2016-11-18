@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body.html{
+            height:100%;
+            width:100%;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width: 550px;;
+            position: absolute;
+            margin:auto;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            height:250px;
+        }
+        li{
+            padding-left: 20px;
+            width: 560px;;
+            overflow: hidden;
+            border-radius: 30px;
+            height: 24px;
+            list-style: none;
+        }
+        span{
+            float: left;
+            width: 60px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;;
+        }
+        .bg1{
+            background: goldenrod;
+        }.bg2{
+            background: lightblue;
+        }.bg3{
+            background:red;
+        }.bg4{
+            background: yellow;
+        }
+        .black{
+            background: black;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            display: none;
+            margin-top: 6600px;
+            margin-left:200px
+        }
+        .hid{
+            display: block;
+        }
+        p{
+            display: none;
+        }
+        .p1p{
+            display: block;
+            width: 500px;
+            height: 300px;
+            position:absolute;
+            top: 200px;
+            left:400px;
+            border:1px solid red;
+            text-align: center;
+            line-height: 250px;
+            color: white;
+        }
+    </style>
+</head>
+<body style="height: 7000px;" id="err">
+<input id='bt1'  type="button" value="各行变色">
+<input id="bt2" type="button" value="清除各行变色">
+<input id='bt3'  type="button" value="各列变色">
+<input id="bt4" type="button" value="清除各列变色">
+<input id="bt5" type="button" value="还可以这样">
+<div id="box"></div>
+<p id="p">滚动鼠标滑轮 见证奇迹的时刻</p>
+<img id="img" src="link" alt="">
+</body>
+<script>
+    var oBox=document.getElementById('box');
+    var lis=oBox.getElementsByTagName('li');
+    var str='<ul>';
+    for(var i=1;i<10;i++){
+        str+='<li>';
+        for(var j=1;j<=i;j++){
+            str+='<span>';
+            str+=j+'*'+i+'='+i*j;
+            str+='</span>';
+        }
+        for(var j=i+1;j<10;j++){
+            str+='<span>';
+            str+='';
+            str+='</span>';
+        }
+        str+='</li>'
+    }
+    str+='</ul>';
+    oBox.innerHTML=str;
+
+//    变色
+var input1=document.getElementById('bt1');
+var input2=document.getElementById('bt2');
+var input3=document.getElementById('bt3');
+var input4=document.getElementById('bt4');
+var input5=document.getElementById('bt5');
+//加各行颜色
+ input1.onclick=function(){
+for(var i=0;i<lis.length;i++){
+    lis[i].className='bg'+(i%2+1);
+    }
+};
+  input2.onclick=function(){
+for(var i=0;i<lis.length;i++){
+    lis[i].className='';
+    }
+};
+//    加格列变色
+    input3.onclick=function(){
+        for(var m=0;m<lis.length;m++){
+        var spans=lis[m].getElementsByTagName('span');
+for(var i=0;i<=m;i++){
+    spans[i].className='bg'+(i%2+3);
+    }
+        }
+};input4.onclick=function(){
+        for(var m=0;m<lis.length;m++){
+        var spans=lis[m].getElementsByTagName('span');
+for(var i=0;i<=8;i++){
+    spans[i].className='';
+    }
+        }
+};
+//    还可以这样
+    input5.onmouseover=function(){
+        alert('滚动鼠标滑轮');
+
+    var oBody=document.getElementById('err');
+oBody.style.backgroundColor='black';
+var p=document.getElementById('p');
+        p.className='p1p';
+    var img=document.getElementById('img');
+        img.className='hid';
+
+    }
+
+
+
+</script>
+</html>

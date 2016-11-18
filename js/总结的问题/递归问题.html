@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    function add(a) {
+//        if (a >6) {
+//            return a;
+//        }
+//        a++;
+//        add(a);
+//        console.log('much');
+//        return  a+'two';
+//    }
+//    console.log(add(1));//为什么输出的是第一次返回的值  ，a是私有变量（考虑是不是和私有变量这有关）
+
+    var total=0;
+     function add(a) {
+        if (a >6) {
+            return a;
+        }
+        a++;
+         total+=a;
+        add(a);
+        console.log('much');
+        return  total+'two';
+    }
+    console.log(add(1));//输出的是最后一次返回的值，total是全局变量
+
+</script>
+</html>

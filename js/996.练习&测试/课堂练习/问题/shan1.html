@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;;;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <p class="box1 box2 box3 box4"></p>
+    <p class="box1 box2 box3"></p>
+    <a id="a" href="javascript:;"></a>
+    <p class="box1"></p>
+    <p class="box1 box2 box3">1</p>
+</div>
+<!--<script>
+
+    var oBox = document.getElementById('box');
+    var oP=oBox.getElementsByTagName('p');
+    oP[0].value='dd';
+    console.log(oP[0].value);
+    oP[0].setAttribute('value','ddd');
+    console.log(oP[0].getAttribute('value'));
+    console.log(oP[0].value);
+
+    function prev(curEle){
+        if('getComputedStyle'in window){
+            return curEle.previousElementSibling;
+        }
+        var pre=curEle.previousSibling;
+        while(pre&& pre.nodeType!==1){
+            pre=pre.previousSibling;
+        }
+        return pre
+    }
+    function next(curEle){
+        if('getComputedStyle'in window){
+            return curEle.nextElementSibling;
+        }
+        var pre=curEle.nextSibling;
+        while(pre&& pre.nodeType!==1){
+            pre=pre.nextSibling;
+        }
+        return pre
+    }
+    function sibling(curEle){
+        var ary=[];
+        var pre=prev(curEle);
+        if(pre) ary.push(pre);
+        var nex=next(curEle);
+        if(nex) ary.push(nex);
+        return ary;
+    }
+    function prevAll(curEle){
+        var pre=prev(curEle);
+        var ary=[];
+        while(pre){
+            ary.push(pre);
+            pre=prev(pre);
+        }
+        return ary
+    }
+    function nextAll(curEle){
+        var nex=next(curEle);
+        var ary=[];
+        while(nex){
+            ary.push(nex);
+            nex=next(nex);
+        }
+        return ary
+    }
+    function siblings(curEle){
+        return prevAll(curEle).concat(nextAll(curEle))
+    }
+    console.log(siblings(a));
+    //    console.log(oBox.getElementsByClassName(' box2      box3 '));
+    /*function getClass(str,parent){
+     var ary=[];
+     parent=parent||document;
+     if('getComputedStyle'in window){
+     ary= Array.prototype.slice.call(parent.getElementsByClassName(str));
+     }else{
+     var aryClass=str.replace(/(^ +)|( +$)/g,'').split(/\s+/g);
+     //            console.log(aryClass)
+     var nodeList=parent.getElementsByTagName('*');
+     for(var i=0;i<nodeList.length;i++){
+     var bOk=true;
+     for(var j=0;j<aryClass.length;j++){
+     var reg=new RegExp('\\b'+aryClass[j]+'\\b');
+     if(!reg.test(nodeList[i].className)){
+     bOk=false;
+     }
+     }
+     if(bOk){
+     ary.push(nodeList[i]);
+     }
+     }
+     }
+     return ary;
+     }
+     console.dir(getClass("box2      box3",oBox));*/
+   /* function hasClass(curEle, cName) {
+        var reg = new RegExp('(^| +)' + cName + '( +|$)', 'g');
+        return reg.test(curEle.className)
+    }*/
+
+
+  /*  function addClass(curEle, strClass) {
+        var aryClass = strClass.replace(/(^ +)|( +$)/g, '').split(/\s+/g);
+        for (var i = 0; i < aryClass.length; i++) {
+            if (!hasClass(curEle, aryClass[i])) {
+                curEle.className += ' ' + aryClass[i]
+            }
+        }
+    }*/
+    /*function removerClass(curEle,strClass) {
+        var aryClass = strClass.replace(/(^ +)|( +$)/g, '').split(/\s+/g);
+        for (var i = 0; i < aryClass.length; i++) {
+            var reg = new RegExp('(^| +)' + aryClass[i] + '( +|$)', 'g');
+//            if (reg.test(curEle.className)) {
+                curEle.className = curEle.className.replace(reg, ' ').replace(/(^ +)|( +$)/g, '').replace(/ +/g, ' ')///??????????/??????????????????????↑
+            }
+//        }
+    }
+    removerClass(oP[0],'box2 box3');*/
+   /* function setCss(curEle,attr,value){
+        console.log('1');
+        if(attr='opacity'){console.log('v')
+                curEle.style.opacity=value;
+                curEle.style.filter='alpha(opacity='+value*100+')'
+        }else{
+            var reg=/ ^[+-]?\d+(px|pt|rem|em|%)?$ /;
+            if(reg.test(value)){
+                if(!isNaN(value)) value=value+'px';
+            }
+
+            curEle.style[attr]=value;
+        }
+    }*/
+    /*function setGroupCss(curEle,obj){
+
+       for(var attr in obj){
+          setCss(curEle,attr,obj[attr])
+       }
+    }*/
+    /*function css(curEle,attr,value){
+        if(typeof(attr)=='string'){
+            if(arguments.length==3){
+                setCss(curEle,attr,value);
+            }else{
+                var str=getCss(curEle,attr)
+            }
+        }else{
+            setGroupCss(curEle,attr)
+        }
+        return str ;
+    }
+    css(box,{width:'100px',height:'100',background:'red'})*/
+    //getChildren
+/*    function getChildren(curEle,tagName){
+        var newAry=[];
+        var ary=curEle.childNodes;
+        for(var i=0;i<ary.length;i+=1){
+            if(ary[i].nodeType==1){
+                if(tagName==undefined){
+                    newAry.push(ary[i]);
+                }else{
+                    if(ary[i].nodeName==tagName.toUpperCase()){
+                        newAry.push(ary[i]);
+                    }
+                }
+            }
+        }
+        return newAry;
+    }
+    console.log(getChildren(oBox,'a'))*/
+</script>-->
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var ary = [1,2,6,1,2,3,2,1,2,2,3,5,2,1,2,2,1,1];
+    var obj = {};
+//    将数组中的每一项以对象的属性名和属性值存储起来
+//    obj[1] = 1;
+//    obj[2] = 2;
+//    obj[6] = 6;
+//    {1:1,2:2,6:6}
+//    存储到第四项 先判断obj里面有没有1这一项
+//    obj[1]  如果这一项存在 说明重复，在ary这个数组中去掉1这一项
+//    obj[1]  不存在这一项，把这一项存储到obj中
+
+    for(var i=0;i<ary.length;i++){
+//        cur  数组中的每一项
+        var cur = ary[i];
+//        判断
+        if(obj[cur]==cur){
+//            在数组中删除这一项
+//          返回删除的那一项 ,原数组改变
+            ary.splice(i,1);
+            i--;
+        }else{
+            obj[cur] = cur;
+        }
+    }
+    console.log(ary);
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

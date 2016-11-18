@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ib="body">
+
+</body>
+<script>
+    //js中创建一个元素
+    var oDiv =document.createElement('div');
+    oDiv.style.width='200px';
+    oDiv.style.height='200px';
+    oDiv.style.backgroundColor='red';
+    oDiv.innerHTML='div';
+
+    document.body.appendChild(oDiv);//  appendChild 在元素最末尾的位置加一个元素
+
+    var op =document.createElement('p');
+    op.style.width='200px';
+    op.style.height='200px';
+    op.style.backgroundColor='blue';
+    op.innerHTML='p';
+
+    document.body.insertBefore(op,oDiv);// insertBefore 在元素最末尾的位置加一个元素（新，旧）
+   //或者 同上 oDiv.parentNode.insertBefore(op,oDiv);//  insertBefore 在元素最末尾的位置加一个元素
+
+    document.body.removeChild(op);//移出子元素
+
+    document.body.replaceChild(op,oDiv);//替换子元素（新的 ，旧的）、
+
+
+//    给元素增加属性的方法
+    //设置id
+    oP.id='p1';
+    //增加 （name,叫什么）  不能设置类名class
+    oP.setAttribute('name','username');
+    oP.getAttribute('name')//获取name；
+//    oP.setAttritute() 与 自定义属性  wrrrrrrdrrrrrrrrrrrrrrrrrrrr区别
+    oP.zf='zfpx'//在标签中看不到
+
+//    cloneNode  克隆
+    var p1=oP.cloneNode(true);//true 将元素包含的标签都克隆出来 以及属性；false 只克隆当前的一个元素
+    document.body.appendChild(p1);
+</script>
+</html>

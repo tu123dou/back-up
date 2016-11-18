@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding:0;
+    font: 12px "microsoft yahei";}
+i{
+    font-style: normal;}
+ul{list-style: none
+}
+/*.clear:after{*/
+    /*content: "";display: block;clear: both;*/
+/*}*/
+.left{
+    padding-right: 12px;
+}
+/*.clearfix{*/
+/*content: '';display: block;clear:both;*/
+
+/*}*/
+.main{
+    background: #333333;
+    height: 27px;
+}
+.left li,.mid li{
+    float: left;
+    color: #b0b0b0;
+}
+li span{
+    color: #424242;
+    padding:0 9px;
+    /*左边*/
+}
+.mid li{
+    float: left;
+}
+.mid .mid1{
+    margin-left: 362px;
+}
+/*中间*/
+
+.right span{
+    color: #b0b0b0;
+    vertical-align: 2px;
+}
+.right{width: 120px ;height: 27px;
+    float: left;padding-right: 30px;background:#424242;margin-left: 25px;
+    padding-top: 13px;position: absolute ;top:0; left: 1168px}
+.right b{
+    background: url("../../第六天/images/未标题-12.png") #424242;
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+
+}
+.right:hover{
+    background: #ffffff ; cursor: pointer;}
+.right:hover span{
+    color: orange;
+}
+
+.right:hover b{
+    background: url("../../第六天/images/未标题-13.png");
+}
+li:hover{
+    color: #ffffff;cursor: pointer;
+}
+.main{
+    padding-top: 13px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 100px;
+            height: 40px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left:0;
+            top:50px;
+            background: red;
+        }
+        #target{
+            position: absolute;
+            left:1200px;
+            top:0px;
+            width: 1px;
+            height: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="向左走">
+<input type="button" value="向右走">
+<div id="div"></div>
+<div id="target"></div>
+<script src="../js/utils.js"></script>
+<script>
+    var aBtn=document.getElementsByTagName('input');
+    var oLeft=aBtn[0];
+    var oRight=aBtn[1];
+    var target=1200;
+    var oDiv=document.getElementById('div');
+    aBtn[1].onclick=function(){
+        move(1200);
+//        move(200);//不会执行move(1200)
+    };aBtn[0].onclick=function(){
+        move(0)
+    };
+
+//    function move(target){
+//        var curPos=utils.getCss(oDiv,'left');
+//        if(curPos<target){
+//            curPos+=10;
+//            if(curPos>=target){
+//                utils.css(oDiv,'left',target);
+//                return;
+//            }
+//            utils.css(oDiv,'left',curPos);
+//        }else{
+//            curPos-=10;
+//            if(curPos<=target){
+//                utils.css(oDiv,'left',target);
+//                return;
+//            }
+//            utils.css(oDiv,'left',curPos);
+//        }
+//        clearTimeout(oDiv.timer);
+//        oDiv.timer=setTimeout(function (){
+//            move(target)//这里的target会去上面的move中查找值所以上一个move不会被释放
+//        },10)
+//    }
+    //以下是优化方案
+        function move(target){
+            _move();
+            function _move(){
+                var curPos=utils.getCss(oDiv,'left');
+                if(curPos<target){
+
+                    curPos+=360.7565;
+                    utils.css(oDiv,'left',curPos);
+                    if(curPos>=target){
+                        utils.css(oDiv,'left',target);
+                        return;
+                    }
+                }else{
+                    curPos-=10;
+                    if(curPos<=target){
+                        utils.css(oDiv,'left',target);
+                        return;
+                    }
+                    utils.css(oDiv,'left',curPos);
+                }
+                clearTimeout(oDiv.timer);
+                oDiv.timer=setTimeout(_move,500)
+            }
+            }
+
+</script>
+</body>
+</html>

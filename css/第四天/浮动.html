@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+    float:left（1 2 3 ） right（3 2 1） none inherit继承父级元素的浮动方式
+    浮动的元素可以识别父级元素的宽度，宽度达到最大值时会自动折行
+    浮动的行内元素可以设置宽度、高度、边距；在没有设置尺寸时尺寸是内容的宽度和高度。浮动的元素不区分块级元素和行内元素的。浮动的元素脱离了正常的文档流：即li设置浮动后给ul设置背景颜色在浏览器中不显示，因为 ul高度是0
+    文字、行内元素、行内块级元素 会围绕浮动元素排列
+    后面的不浮动的块级元素会霸占前面浮动元素的位置
+    浮动的元素都在同一平面
+    上下浮动的元素margin会相加
+<ul style="background: red">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<body>
+</body>
+</html>

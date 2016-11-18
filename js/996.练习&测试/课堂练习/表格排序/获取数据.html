@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1"></ul>
+</body>
+<script src="../js/utils.js"></script>
+<script>
+    var data = [];
+    getData();
+    function getData() {
+        //创建一个xml对象
+        var xml = new XMLHttpRequest();
+        //打开地址
+        xml.open('get', 'data.txt', false);
+        //
+        xml.onreadystatechange = function () {
+            if (xml.readyState == 4 && /^2\d{2}$/.test(xml.status)) {
+                data = utils.jsonParse(xml.responseText)
+            }
+        };
+        xml.send(null)
+    }
+    console.log(data);
+    var str = '';
+    var oUl = document.getElementsByTagName('ul')[0];
+    for (var i = 0; i < data.length; i++) {
+        str = '<li>' + data[i].name + '</li>';
+    }
+    oUl.innerHTML += str
+
+</script>
+</html>

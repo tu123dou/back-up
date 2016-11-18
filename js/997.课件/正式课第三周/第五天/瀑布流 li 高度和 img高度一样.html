@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        div{
+            width: 1260px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 200px;
+            margin: 5px;
+            float: left;
+        }
+        div ul li{
+            width:100%;
+            background: url("img2/default.gif") no-repeat center #ccc;
+            margin-bottom: 10px;
+        }
+        div ul li img{
+            width:100%;
+            height:100%;
+            /*vertical-align: top;*/
+        }
+        a{
+            position: fixed;
+            right:10px;
+            bottom:10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            line-height: 100px;
+            font-size: 30px;
+            background: darkgreen;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+</div>
+<a id="a" href="javascript:;"></a>
+</body>
+<script src="js/utils.js"></script>
+<script>
+    var c=null;
+    var oUl=div.getElementsByTagName('ul');
+    var aImg=document.getElementsByTagName('img');
+    var a=document.getElementById('a');
+    var bOk=false;
+    var timer=null;
+    var data=[
+        {imgSrc:'img2/1.jpg'},
+        {imgSrc:'img2/2.jpg'},
+        {imgSrc:'img2/3.jpg'},
+        {imgSrc:'img2/4.jpg'},
+        {imgSrc:'img2/5.jpg'},
+        {imgSrc:'img2/6.jpg'},
+        {imgSrc:'img2/7.jpg'},
+        {imgSrc:'img2/8.jpg'},
+        {imgSrc:'img2/9.jpg'},
+        {imgSrc:'img2/10.jpg'}
+    ];
+    //创建一个li
+    function createLi(){
+        var oLi=document.createElement('li');
+        oLi.innerHTML='<img src=""  realImg= '+data[utils.rnd(0,9)].imgSrc+' alt=""> ';
+       oLi.style.height=utils.rnd(80,200)+'px';
+        return oLi;
+    }
+    //创建50个li
+    function li50(){
+        for(var i=0;i<50;i++){
+            var oLi=createLi();
+            var ary=utils.makeArray(oUl);
+            ary.sort(function(a,b){
+                return a.offsetHeight- b.offsetHeight;
+            });
+            ary[0].appendChild(oLi);
+        }
+    }
+    //加载图片
+    function showImg(){
+        for(var i=0;i<aImg.length;i++){
+            var scrollBottom=utils.win('scrollTop')+utils.win('clientHeight');
+            if(aImg[i].style.height+utils.offset(aImg[i]).top<scrollBottom){
+                lazyImg(aImg[i]);
+            }
+        }
+    }
+    function lazyImg(aImg){
+        if(aImg.loaded) return;
+        var tmpImg=new Image;
+        tmpImg.src=aImg.getAttribute('realImg');
+        tmpImg.onload=function(){
+            aImg.src=tmpImg.src;
+            tmpImg=null;
+            aImg.loaded=true;
+//            aImg.parentNode.style.height=aImg.offsetHeight+'px'
+        };
+        tmpImg.error=function(){
+            aImg.parentNode.style.background='url("img2/error.gif") no-repeat center #ccc;';
+            tmpImg=null;
+            aImg.loaded=true;
+        }
+    }
+    function on(){
+        var target=utils.win('scrollTop');
+        var duration=3000;
+        var interval=30;
+        var step=target/duration*interval;
+        timer=setInterval(function(){
+            var cur=utils.win('scrollTop');
+            if(cur==0) clearInterval(timer);
+            cur-=step;
+            utils.win('scrollTop',cur);
+            bOk=false;
+        },interval)
+    }
+    //................,...........
+    li50();
+    showImg();
+    window.onscroll=function(){
+        console.log(document.documentElement.clientHeight);
+        console.log(document.body.clientHeight)
+       /* if(bOk){
+            clearInterval(timer)
+        }
+        bOk=true;*/
+        if(c<=utils.win('scrollTop')) clearInterval(timer);//停止的方法二
+        c=utils.win('scrollTop');
+        showImg();
+        var scrollBottom=utils.win('scrollTop')+utils.win('clientHeight');
+        if(document.body.clientHeight-100<=scrollBottom){
+            li50()
+        }
+        if(utils.win('clientHeight')<utils.win('scrollTop')){
+            a.style.display='block'
+        }
+        else{
+            a.style.display='none'
+        }
+
+    };
+    a.onclick=on;
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary=[1,2,44,4,35];
+//  console.log(Math.max.apply(null,ary));
+//    console.log(eval('Math.max('+ary.toString()+')'))
+//    假设法
+   /* var max=ary[0];
+    var min=ary[0];
+    for(var i=0;i<ary.length;i++){
+        if(ary[i]>max) max=ary[i];
+        if(ary[i]<min) min=ary[i];
+    }
+    console.log(max,min)*/
+    //sort排序
+    ary.sort(function(a,b){return a-b});
+    var max=ary.pop();
+    var min=ary.shift();
+    console.log(max,min)
+</script>
+</body>
+</html>

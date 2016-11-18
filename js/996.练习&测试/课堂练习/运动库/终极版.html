@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: absolute;
+            left:300px;
+            top:0;
+            width: 200px;
+            height:200px;
+            background: red;
+        }
+        #target{
+            position: absolute;
+            left:1200px;
+            top:0;
+            width: 1px;
+            height: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+<div id="target"></div>
+<script src="js/utils.js"></script>
+<script src="js/move终极版.js"></script>
+<script>
+    var oDiv=document.getElementById('div');
+    animate({
+        id:div,
+        target:{
+            left:1000,
+            top:400
+        },
+        callback:function(){
+            this.style.background='blue'
+        },
+        effect:[ 'Circ','easeInOut' ]
+
+    })
+</script>
+</body>
+</html>

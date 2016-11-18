@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            padding-left: 14px;
+            width: 280px;
+            height: 54px;
+            line-height: 54px;
+            font-size: 33px;
+            color: chocolate;
+            margin:auto;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border: 3px solid #b85509;
+            box-shadow: 0 0 5px 5px rgba(0,0,0,.5);
+            font-weight:bold;
+        }
+        #box.cl1{
+            color:orange;
+        }#box.cl2{
+            color:red;
+        }#box.cl3{
+            color:blue;
+        }#box.cl4{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+    //    var tar=new Date('2016-10-20 18:00:00');//    不兼容
+
+    //第一种
+    //    window.setInterval(function () {
+    //        var tar = new Date('2016/10/20 18:00:00');//兼容
+    //        var now = new Date();
+    //        var tarTime = tar.getTime();//目标时间距离1970年的毫秒数
+    //        var nowTime = now.getTime();//现在距离1970年的毫秒数
+    //        var times = tarTime - nowTime;
+    //        var hour = Math.floor(times / 3600000);
+    //        var min = Math.floor((times / 3600000 - hour) * 60);
+    //        var sec = Math.floor(((times / 3600000 - hour) * 60 - min) * 60)
+    //        var a = zero(hour) + ':' + zero(min) + ':' + zero(sec);
+    //        box.innerHTML = 'dg    ' + a;
+    //        function zero(a) {
+    //            return a < 10 ? '0' + a : a;
+    //        }
+    //    }, 1000);
+    //第一种结束
+    //第二种
+
+//    box.innerHTML = '倒计时' + a;
+    shi();
+    var i=0;//变色
+    var timer = window.setInterval(function () {
+        i=i+1;//变色
+        box.className='cl'+i;//变色
+        shi();
+        if(i>4){
+            i=0
+        }//变色
+    }, 1000);
+    function shi() {
+        var now = new Date();
+        var tar = new Date('2016/10/20 21:43:30');//兼容
+        var tarTime = tar.getTime();//目标时间距离1970年的毫秒数
+        var nowTime = now.getTime();//现在距离1970年的毫秒数
+        var times = tarTime - nowTime;
+        if(times<=0){
+            var s='00:00:00';
+            box.innerHTML='结束'+s;
+            clearInterval(timer);
+            return ;
+        }
+        var hour = Math.floor(times / 3600000);
+        var min = Math.floor((times / 3600000 - hour) * 60);
+        var sec = Math.floor(((times / 3600000 - hour) * 60 - min) * 60)
+        var a = zero(hour) + ':' +zero(min)+ ':' +zero(sec);
+        box.innerHTML = '倒计时' + a;
+        function zero(a) {
+            return a < 10 ? '0' + a : a;
+        }
+//        return a;
+    }
+
+
+    //    定时器
+    //    window.setTimeout()      callback 回调函数 ，时间  默认单位ms
+    // 只执行一次
+    //    window.setInterval()
+    // 循环的执行
+    //    var i = 0;
+    //    var time = window.setInterval(function () {
+    //        i++;
+    //        if (i > 4) {
+    ////            clearInterval(time);
+    //            return
+    //        }
+    //        console.log(i);
+    //    }, 1000)
+
+
+</script>
+</html>

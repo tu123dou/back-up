@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    var total = 0;
+    var i = 1;
+    // function sum(i){
+    //     if(i>100){
+    //         return total;
+    //     }
+    //     if(i%3==0 && i%5==0){
+    //         total+=i;
+    //     }
+    //     i++;
+    //     return sum(i);
+    // }
+    //    console.log(sum(1));
+
+    //第二种
+    function sum(i) {
+        if (i >=30) {
+//            console.log('d');
+            return total+'df';//这个total是i>100是的返回值，对于本例没有total也可以必须有return以便结束递归。通过测试，整个function返回值要的是最后一个return total，此处return无用。
+        }
+        if (i % 3 == 0 && i % 5 == 0) {
+            total += i;
+        }
+        i++;
+        sum(i);
+//        console.log('gd')
+        return total+'dg';//这个return是i<=100时的返回值，如果没有的话将输出undefined。
+    }
+    console.log(sum(15));
+//     sum(15);//执行的过程
+//     console.log(total);//这个total是从function里面拿取的。
+
+
+    //    var num=0;
+    //    function sum(){
+    //        if(num>=100){
+    //            return total
+    //        }
+    //        num++;
+    //        if(num%3==0&&num%5==0){
+    //            total+=num;
+    //        }
+    //        return sum()
+    //    }
+    //    console.log(sum())
+
+</script>
+</html>

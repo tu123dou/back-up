@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+    </script>
+</head>
+<body>
+函数：一个功能或是一个方法
+组成：一、声明 定义：function a(){}   ;function 函数名(){ 函数体 }
+      二、执行  a（）；   函数名()    不执行的话{}里的被认为是字符串（地址）
+                                      执行的时会将字符串变为js代码从上到下执行
+
+<div>
+    <input type="button" value="按钮1">
+    <input type="button" value="按钮2">
+    <input type="button" value="按钮3">
+</div>
+</body>
+<script>
+var oInput=document.getElementsByTagName("input");
+
+for( var i=0;i<3;i++) {
+    oInput[i]["dg"]=i; //    自定义属性，增加一个属性
+
+    oInput[i].onclick = function () {
+        alert(this["dg"]);
+//        ****this指的是.onclick前面的，表示当前的i***
+    }
+
+}
+
+
+</script>
+</html>

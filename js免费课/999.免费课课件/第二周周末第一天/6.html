@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+1、比较
+1）对象==对象  false
+2）对象==字符串  对象转为字符串
+3）对象==布尔   都转为数字
+4) 对象==数字  对象转为数字
+5）布尔==字符串 都转为数字
+6）布尔==数字  布尔转数字
+7）字符串==数字  字符串转数字
+8）null==undefined true
+9）null或者undefined和其他比较  false
+
+![]==false   false==false   true
+[]==false   0==0   true
+
+false:0、NaN、''、null、undefined
+
+2、NaN:转换不成功
+Number()
+parseInt()
+parseFloat()
+
+
+1+undefined  NaN
+1+'3px'    '13px'
+1*'3px'     NaN
+1/'3px'    NaN
+1-'3px'    NaN
+
+3、对象
+    var obj = {}
+    var obj = new Object();
+    1）增加
+    obj.name = 'zfpx'
+    2）获取name对应的属性值
+    obj.name
+    3）修改属性名对应的属性值
+    obj.name = 'zf'
+    4)删除
+        obj.name = null;
+        delete obj.name
+4、基本数据类型和引用数据类型的本质区别
+
+5、检测数据类型
+    typeof instanceof constructor  Object.prototype.toString.call()
+6、判断
+    if条件中：
+        > < >= <= == ===   &&并且   ||或者  + - * /
+        一个值:直接判断真假
+    if([]){
+        alert(123)
+    }
+
+    条件?条件成立执行的代码:条件不成立执行的代码;
+                        :void 0;
+<script>
+
+    for(var i=0;i<5;i++){
+        循环体;
+    }
+
+    var i=0;
+    while(i<5){
+        循环体;
+        i++;
+    }
+
+</script>
+
+7、for循环
+    break;  整个循环结束
+    continue;  当前这一轮循环体后面的代码不执行，继续累加，继续下一轮循环
+
+8、for in循环
+    for(var key in 对象名){
+        key：属性名
+        属性值：对象名[key]
+    }
+9、字符串
+    1、charAt(索引)  str[索引]
+    2、substr(n,m)  从索引n开始截取m个
+       substring(n,m)  从索引n开始截取到索引为m处，不包括m
+       slice(n,m)    从索引n开始截取到索引为m处，不包括m
+
+    var str = 'absdfg';
+    str.slice(1,-2)
+
+    3、toUpperCase  大写
+       toLowerCase  小写
+    4、indexOf(字符)
+    5、replace
+<script>
+    var str = 'absdfg';
+    var a = str.replace('a','A')
+    console.log(a)
+</script>
+var str = 'a+b+s+d+f+g';
+    6、split('+')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

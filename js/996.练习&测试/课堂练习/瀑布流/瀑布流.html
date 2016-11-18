@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width: 1050px;
+            margin:10px auto;
+            overflow: hidden;
+            /*height: 2000px;;;*/
+        }
+        ul{
+            width: 200px;
+            margin: 5px;
+            float: left;
+            /*background: red;*/
+            /*height: 200px;;;*/
+        }
+        li{
+            list-style: none;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+<ul></ul>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+</div>
+</body>
+<script src="utils.js"></script>
+<script>
+    var div=document.getElementById('div')
+    console.log(document.body.scrollHeight);
+    var oUl=document.getElementsByTagName('ul');
+
+    function createLi(){
+        var oLi=document.createElement('li');
+        oLi.style.height=utils.rnd(80,200)+'px';
+        oLi.style.background='rgb('+utils.rnd(0,255)+','+utils.rnd(0,255)+','+utils.rnd(0,255)+')';
+        return oLi;
+    }
+    //插入li
+    function li50(){
+        for(var j=0;j<30;j++){
+            var ary=utils.makeArray(oUl);
+            ary.sort(function(a,b){
+                return a.offsetHeight- b.offsetHeight;
+            });
+            ary[0].appendChild(createLi())
+        }
+    }
+   li50();
+    window.onscroll=function(){
+        var scrollBottom=utils.win('scrollTop')+utils.win('clientHeight');
+        if(div.scrollHeight-300<=scrollBottom){
+            li50();
+        }
+    }
+
+</script>
+</html>

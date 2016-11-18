@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body.html{
+            height:100%;
+            width:100%;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width:400px;
+            margin:0 auto;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            width: 100px;
+            height: 30px;
+        line-height: 30px;
+            border:1px solid red;
+        margin-left: -1px;
+            background: -webkit-linear-gradient(top,blue,red);
+        }
+        #box>div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+            display: none;
+        }
+        #box div.se{
+            display: block;
+        }
+        #box li.se{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li class="se">选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+    </ul>
+    <div class="se">yi</div>
+    <div>er</div>
+    <div>san</div>
+</div>
+</body>
+<script>
+var oBox=document.getElementById('box');
+var lis =oBox.getElementsByTagName('li');
+var divs =oBox.getElementsByTagName('div');
+   for(var i=0;i<lis.length;i++){
+       lis[i].zf=i;
+       lis[i].onmouseover=function(){
+           for(var j=0;j<lis.length;j++){
+               lis[j].className='';
+               divs[j].className='';
+           }
+        this.className='se';
+           divs[this.zf].className='se';
+       }
+   }
+
+
+
+</script>
+</html>

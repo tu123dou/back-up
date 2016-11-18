@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+           margin: 10px;
+            width: 60px;;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var str='<ul>';
+    for(var i=1;i<=9;i++){
+        str+='<li>';
+        for(var j=1;j<=i;j++){
+            str+='<span>'+j+'*'+i+'='+i*j+'</span>';
+        }
+        str+='</li>'
+    }
+    str+='</ul>';
+    console.log(str)
+    document.body.innerHTML=str;
+</script>
+</body>
+</html>

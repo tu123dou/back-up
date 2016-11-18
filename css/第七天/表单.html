@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="">
+:focus{} 伪类元素  获取光标时的样式
+input[type=text]{width:100px;height:200px;
+                    -webkit-border-radius:10px;兼容谷歌浏览器
+                        -moz-border-radius：10px;兼容火狐浏览器
+                         border-radius：10px
+                       padding:0 10px;文字与边框的距离}
+input[type=text]:focus{background:red;背景颜色改变
+                        outline:none;去掉边框外面的蓝线}
+input[type=password]:focus{}   文本框、密码框高度默认加2px
+input{outline:none去掉外围线}
+<input type="button" value="登录"/>去掉边框 border：none
+<input type="text" placeholder="默认的文字"/>
+提交按钮： <input type="submit"/>
+重置按钮： <input type="reset"/>必须在一个form中。
+单选按钮：<lable for="man">男</lable><input  type=radio id="man" name="sex"/> 点 “男”字也可以选
+          <lable for="">女</lable>    <input type=radio name="sex"/>
+    <input type="radio" style="width:30px" height="30px"/>
+复选按钮：<input type="checkbox"/> <lable for=""> xuexi</lable>
+下拉菜单：<select name="" id="">
+         <option value="">山西</option>
+         <option value="">河北</option>
+         </select>
+选择文件：<input type="file"/>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str='abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789';
+   var word='';
+    while(word.length<4){
+        var num=Math.round(Math.random()*61);
+        word+=str.charAt(num);
+    }
+    console.log(word)
+</script>
+</body>
+</html>

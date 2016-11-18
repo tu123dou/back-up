@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="../../1.封装的代码/myUtils.js"></script>
+<script>
+  /*  var ary=[1,2,3,1,2,2,3,1,2,3,4];
+   var str={};
+        for(var i=0;i<ary.length;i++){
+            var cur=ary[i];
+            if(str[cur]==cur){
+//                ary.splice(i,1);
+//
+                ary[i]=ary[ary.length-1];
+                ary.length--;
+                i--
+            }
+            else{
+                str[cur]=cur
+            }
+    }
+    console.log(ary);
+    console.log(str)*/
+  var ary=[1,2,3,1,2,2,3,1,2,3,4];
+function qu(ary){
+    var obj={};
+  for(var i=0;i<ary.length;i++){
+      var cur=ary[i];
+      if(obj[cur]){
+          obj[cur]++
+      }else{
+          obj[cur]=1
+      }
+  }
+    console.log(obj);
+    var ary1=[];
+    for(var attr in obj){
+        ary1.push(obj[attr]);
+    }
+    return ary1
+}
+   alert(qu(ary))
+</script>
+</html>

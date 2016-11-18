@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            font-size: 16px;
+            border:1px solid #c0c0ce;
+            width: 98%;
+            margin: 0 auto;
+        }
+        th,td{
+            border:1px solid #c0c0ce;
+        }
+        td{
+            text-align: center;
+        }
+        .add{
+            text-align: left;
+            padding-left: 3em;
+        }
+        th,td{
+            line-height:2em ;
+        }
+        thead{
+            background: lightblue;
+        }
+        td a{
+            color: #f60;
+            text-decoration: none;
+        }
+        @media all and (max-width: 480px){
+            thead{
+                display: none;
+            }
+            td{
+                display: block;
+                text-align: left;
+                padding-left: 5%;
+            }
+            .name{
+                background: lightblue;
+            }
+            .name:before{
+                content: '姓名';
+                font-weight: bold;
+                padding-right: 10%;
+            }
+            .add:before{
+                content: '地址';
+                font-weight: bold;
+                padding-right: 10%;
+
+            }
+            .add{
+                padding-left: 5%;
+            }
+            tr{
+                display: block;
+                position: relative;
+                -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5);
+                -moz-box-shadow:0 2px 5px rgba(0,0,0,.5);
+                box-shadow: 0 2px 5px rgba(0,0,0,.5) ;
+                margin-bottom: 1em;
+            }
+            .opp{
+                position: absolute;
+                top:0;
+                right: 10%;
+
+            }
+            table,th,td{
+                border: none;
+            }
+
+        }
+        @media all and (min-width: 480px) and (max-width: 768px) {
+
+        }
+        @media all and (min-width: 769px) {
+
+        }
+    </style>
+</head>
+<body>
+<table cellspacing="0">
+    <caption>学生管理系统</caption>
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>地址</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tr>
+        <td class="name">郭晓靖</td>
+        <td class="add">北京市昌平区回龙观东大街</td>
+        <td class="opp">
+            <a href="#">修改</a>
+            <a href="#">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="name">陆杨杨</td>
+        <td class="add">安徽合肥</td>
+        <td class="opp">
+            <a href="#">修改</a>
+            <a href="#">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="name">王涛</td>
+        <td class="add">北京市昌平区回龙观东大街</td>
+        <td class="opp">
+            <a href="#">修改</a>
+            <a href="#">删除</a>
+        </td>
+    </tr>
+</table>
+
+<header></header>
+<nav></nav>
+<article></article>
+<section></section>
+<footer></footer>
+
+
+</body>
+</html>

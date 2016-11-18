@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+将数组的每一项以对象的属性名和属性值存储起来；
+
+
+</body>
+<script>
+
+   ary=[1,3,5,4,3,5,2,1,5,2,5,4]
+    var obj=[];
+    for(var i=0;i<ary.length;i+=1){
+        var cur=ary[i];
+        if(obj[cur]==cur){
+            ary[i]=ary[ary.length-1];
+            ary.length--;
+            i--;
+//            或者
+//            ary.splice(i,1);
+//            i--
+        }else{
+            obj[cur]=cur
+        }
+    }
+//   obj['6']='6';
+
+//   dierzhong
+   console.log(obj);
+  console.log(ary.sort(function(a,b){return a-b}));
+
+obj=[1:1,2:2,3:11]
+//obj[1]='12'
+console.log(obj)
+</script>
+</html>

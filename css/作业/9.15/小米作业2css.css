@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+ul{
+    list-style: none;
+/*可继承的属性*/
+}
+span{
+    font-style: normal;
+
+}
+img{
+    border: none;
+
+    vertical-align: top;
+}
+div {
+/*height: 341px;*/
+    background:black;
+    /*margin: 0 auto;*/
+    /*父级元素中水平居中 一定要有宽度*/
+}
+ul li {
+    height: 340px;
+    width: 234px;
+    margin-left: 14px;
+    /*border-top:1px solid orange;*/
+    display: inline-block;
+    background: #f9f9f9;
+}
+li img{
+    height: 200px;
+    width: 234px;
+}
+li div{
+    height: 137px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+li div .canshu{
+    margin-top: 31px;
+    font-size: 12px;
+    color: #212121;
+}
+li div .tedian{
+    margin: 11px 0 20px 0;
+    font-size: 12px;
+    color: #b1b1b1;
+}
+div span{
+    font-size: 12px;
+    color: #ff6608;
+}

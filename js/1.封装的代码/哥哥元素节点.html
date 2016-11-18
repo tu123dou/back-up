@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getPreEle(pre) {
+        if ('previousElementSibling' in Object) {//标准浏览器
+            return pre.previousElementSibling
+        }
+        var pre1=pre.previousSibling;
+        while (pre1 && pre1.nodeType !== 1) {//兼容模式
+            pre1 = pre1.previousSibling;
+        }
+        return pre1;
+    }
+</script>
+</html>

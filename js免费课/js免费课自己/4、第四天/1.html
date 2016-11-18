@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" ></style>
+    <link rel="stylesheet" href="">
+</head>
+<body >
+
+js外链式：在一个js文件中第一行写
+document.write("<script scr='注意引号不能嵌套相同的引号（可以用"/hdg/")   '> </script>")
+
+
+
+</body>
+<script >
+/*function sum(){
+    var total=1+1;
+    console.log(total)
+}
+    sum();*/
+
+
+/*function sum(a,b){
+    var total=a+b;
+    console.log(total)
+}
+    sum(2,3)*/
+
+    function sum(){
+        var total=0;
+        for(var i=0;i<arguments.length;i++){
+           total+=arguments[i];
+        }
+//        console.log(total);
+        return total;
+    }
+//sum(1,32,2);
+
+
+var ds=sum(1,32,1);
+   console.log( ds);
+
+</script>
+</html>

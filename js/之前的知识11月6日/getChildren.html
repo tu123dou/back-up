@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getChi(curEle){
+        var aChild=curEle.childNodes;
+        var ary=[];
+        for(var i=0; i<aChild.length; i++){
+            if(aChild[i].nodeType===1){
+                ary.push(aChild[i]);
+            }
+        }
+        return ary;
+    }
+</script>
+</body>
+</html>

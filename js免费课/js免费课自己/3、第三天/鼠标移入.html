@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+        ul{
+            height: 500px;;
+            width: 500px;
+            border-radius: 50% 50%;
+            margin:0 auto;
+            overflow: hidden;
+            padding:0;
+        }
+        li{
+            height: 30px;
+        line-height: 30px;
+            margin:0;
+        }
+        .bg1{background-color: blue}
+        .bg2{
+            background-color: orange;
+        }
+.bg3{
+    background-color: yellow;
+}
+        .er{
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li>hjd1</li>
+    <li>hjd2</li>
+    <li class="er" >hjd3</li>
+    <li>hjd4</li>
+    <li>hjd5</li>
+    <li>hjd6</li>
+    <li>hjd7</li>
+    <li>hjd8</li>
+    <li>hjd9</li>
+    <li>hjd10</li>
+    <li>hjd11</li>
+    <li>hjd12</li>
+</ul>
+</body>
+<script>
+    var oUl=document.getElementById("box");
+    var lis=oUl.getElementsByTagName('li');
+    console.log(lis);
+    for(var i=0;i<lis.length;i++){
+//
+            if(i%2==0){
+                lis[i].className="bg1"
+                lis[i].zf='bg1'
+            }else{
+                lis[i].className='bg2';
+                lis[i].zf='bg2'
+
+            }
+        lis[i].onmouseover=function(){
+            this.className="bg3";
+
+        };
+        lis[i].onmouseout=function(){
+            this.className=this.zf;
+//            alert(this.className)
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p></p>
+<div id="div"></div>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+<script>
+    //    function abc(){
+    //        a=12;
+    //        alert(a);
+    //    }
+    //    function b(){
+    //        alert(a)
+    //    }
+    //    abc();
+    //    b();
+    /** 堆内存的释放：变量名=null，栈内存的释放 全局作用域的释放  私有作用域的释放 一般情况默认释放，主要有两种情况不释放：
+     * 不释放
+     * 只对等号左边声明不定义，
+     * 自执行函数
+     * 已经声明过得变量不会重复声明
+     * return 后边的语句不会进行与解释
+     * return 下边的不会进行
+     */
+  var pre=document.body;
+    function aa(pre){
+    if(pre.previousElementSibling){
+        return pre.previousElementSibling
+    }
+        else{
+        var prev=pre.previousSibling;
+        while (prev&&prev.nodeType!==1){
+            prev=prev.previousSibling
+        }
+        return prev;
+    }
+    }
+   console.log( aa())
+</script>
+</html>

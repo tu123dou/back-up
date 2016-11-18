@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+clear：left right both  作用 清除 浮动元素对其他元素的影响
+第一种方法在最后一个浮动元素后加入空的块级元素 <p style="clear:both"></p>
+第二种方法伪元素 在style中加入  .类名clearfix:after{
+content:""; display:block; clear:both;height:0；overflow:hidden; }给<!--父级-->元素加上类名classfix
+兼容ie6-ie8时  .classfix{ zoom:1}
+一个元素可以设置多个类名，每个类名用空格隔开
+第三种方法给父级元素设置overflow:hidden 浮动的元素超出范围时也会被隐藏
+float:none 不浮动
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>标题</h1>
+<!--标题-->
+<ul id="ul">
+    <li>1</li>
+    <li>2</li>
+    <!-- 选项三-->
+    <li>3</li>
+</ul>
+<script>
+    //children
+//    childNodes
+    function getChildren(ele){
+        var ary = [];//存储元素节点
+        var nodes = ele.childNodes;
+//        nodeType
+//        元素节点 1  文本节点 3  注释节点8  document 9
+        for(var i=0;i<nodes.length;i++){
+            var cur = nodes[i];
+            if(cur.nodeType==1){
+                ary.push(cur);
+            }
+        }
+        return ary;
+    }
+    console.log(getChildren(ul));
+
+//    获取ul的上一个哥哥元素节点
+
+//    pre上一个哥哥节点
+    var pre = ul.previousSibling;
+    while(pre&&pre.nodeType!==1){
+        pre = pre.previousSibling;
+    }
+    console.log(pre);
+
+//    下一个弟弟元素元素节点
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

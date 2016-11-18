@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0}
+ul{
+    list-style: none;
+}
+i{
+    font-style: normal;
+    /*斜体去掉*/
+}
+b{
+    font-weight: normal;
+    /*去掉加粗*/
+}
+img{
+    border: none;
+    /*去掉边框*/
+    vertical-align: top;
+    /*掉3px的边距或者diaplay:block;*/
+}
+.main{background: #f5f5f5;}
+/*rgb(三个数用逗号隔开 )； rgba（0,0,0，.5）透明的颜色； transparent完全透明的颜色*/
+ul li{
+    width: 296px;height: 415px;display:inline-block;
+}
+li img{
+    width: 296px;
+    height: 220px;
+    /*一定要设置宽度和高度*/
+}
+li div{
+    height: 163px;    /*要减去padding值 */
+    background:#ffffff;
+    padding-left: 28px;
+    padding-top: 32px;
+    padding-right:30px;
+}
+li div .ar{
+    font-size: 12px;
+    color:#333;    /*颜色为#aabbcc格式的时候可以写成#abc*/
+    line-height: 24px;
+}
+li .qw{
+    font-size: 12px;
+    margin: 22px 0 12px 0px;
+
+}
+li div span{
+    font-size:14px;
+}
+li div i{
+    color: #dfdfdf;
+}
+li div b {
+font-size: 14px;
+}

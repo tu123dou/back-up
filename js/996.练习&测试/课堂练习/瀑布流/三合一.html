@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        div{
+            width:1260px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        div ul{
+            width: 200px;
+            margin: 5px;
+            float: left;
+        }
+        div ul li{
+            width: 200px;
+            background: url("img2/default.gif") no-repeat center #ccc;
+            margin: 10px;
+        }
+        ul li img{
+            width:100%;
+
+        }
+        #a{
+            width:60px;
+            position: fixed;
+            bottom:10px;
+            right:0;
+        }
+        #top{
+            width: 0;
+            height:0;
+            border:30px solid;
+            border-color: transparent transparent  red transparent;
+        }
+        #top2{
+            /*width: 60px;*/
+            /*height: 60px;;;*/
+            width:0;
+            height:0;
+
+            position: absolute;
+            left:0;
+            top:0;
+            border:2px solid ;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+</div>
+<div id="a"><div id="top"></div><div id="top2"></div></div>
+<!--<a href="javascript:;"></a>-->
+</body>
+<script src="utils.js"></script>
+<script>
+    var aUl=box.getElementsByTagName('ul');
+    var aImg=document.getElementsByTagName('img');
+    var data=[
+        {imgSrc:'img2/1.jpg',height:'122px'},
+        {imgSrc:'img2/2.jpg',height:'133px'},
+        {imgSrc:'img2/3.jpg',height:'112px'},
+        {imgSrc:'img2/4.jpg',height:'162px'},
+        {imgSrc:'img2/5.jpg',height:'134px'},
+        {imgSrc:'img2/6.jpg',height:'192px'},
+        {imgSrc:'img2/7.jpg',height:'142px'},
+        {imgSrc:'img2/8.jpg',height:'133px'},
+        {imgSrc:'img2/9.jpg',height:'112px'},
+        {imgSrc:'img2/10.jpg',height:'149px'}
+
+    ];
+    //创建一个li
+    function createLi(){
+        var oLi=document.createElement('li');
+        var num=utils.rnd(0,9);
+        oLi.innerHTML='<img src="" realImg="'+data[num].imgSrc+'" alt="">';
+        oLi.style.height=data[num].height;
+        return oLi;
+    }
+    //创建50个li
+    function li50(){
+        for(var i=0;i<50;i++){
+            var oLi=createLi();
+            var ary=utils.makeArray(aUl);
+            ary.sort(function(a,b){
+                return a.offsetHeight- b.offsetHeight
+            });
+            ary[0].appendChild(oLi);
+        }
+    }
+    //show 图片
+    function show(){
+        var scrollBottom=utils.win('clientHeight')+utils.win('scrollTop');
+        for(var i=0;i<aImg.length;i++){
+//            aImg[i].offsetHeight=;
+//            console.log(aImg[i].offsetHeight);
+            if(utils.offset(aImg[i]).top+aImg[i].parentNode.offsetHeight<scrollBottom){
+                lazyImg(aImg[i]);
+            }
+        }
+    }
+    //lazy图片
+    function lazyImg(aImg){
+
+        if(aImg.loaded ) return;
+        var tmpImg=new Image;
+        tmpImg.src=aImg.getAttribute('realImg');
+        tmpImg.onload=function(){
+            aImg.style.height=aImg.parentNode.style.height;
+            aImg.src=tmpImg.src;
+            tmpImg=null;
+            aImg.loaded=true;
+        };
+        tmpImg.error=function(){
+            aImg.parentNode.style.background='url("img2/error.gif") no-repeat center #ccc';
+            tmpImg=null;
+            aImg.loaded=true;
+        }
+    }
+    //window onscroll
+    window.onscroll=function(){
+        show();
+        var scrollBottom=utils.win('clientHeight')+utils.win('scrollTop');
+        if(scrollBottom+100>=document.body.offsetHeight){
+            li50();
+        }
+
+    };
+    //回到顶部
+    li50();
+    show()
+</script>
+</html>
