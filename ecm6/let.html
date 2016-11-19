@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div">gdgdgdgdgdg</div>
+<div class="div">gdgdgdgdgdg</div>
+<div class="div">gdgdgdgdgdg</div>
+<div class="div">gdgdgdgdgdg</div>
+<!--<script>
+var div=document.getElementsByTagName('div');
+    //1.let不存在预解释
+//    console.log(name);//报错
+//    let name='ee';
+    //2.const es6中声明  一旦声明就不能更改
+   //3.
+    for(let i=0;i<4;i++){
+//        console.log(i);
+        div[i].onclick=function(){
+            console.log(i)
+        }
+    }
+var name='qw',age=12;
+//var str='我的名字是'+name+'我的年龄是'+age+'岁';
+var str=`我的名字是${name}我的年龄是${age}岁`;////?????
+console.log(str)
+    var obj={a:1,b:2,c:3};
+    var obj1={a:11,b:22};
+    console.log( Object.assign({},obj,obj1))
+
+</script>-->
+<script>
+    var name='珠峰培训';
+    var obj={
+        'name':'scx'
+    };
+    var obj1={
+        [name]:'dddddd'//变量名可以做为属性名
+    };
+    console.log(obj1[name])//ddddd
+    console.log(obj['name'])//scx
+    console.log(obj1['珠峰培训'])//dddddd
+    function aa(a=1,b=2){
+        console.log(a+b)
+    };
+    aa()
+    function vv(...name){
+        console.log(name)//[1, 2, 2, 4, Object, "scx"]是一个数组
+    }
+    vv(1,2,2,4,{name:'scx'},'scx');
+    //箭头函数
+    var add=(a=2,b=3)=>{
+        console.log('搜索')
+        return a+b;
+    }
+    console.log(add())
+    var add=(a=2,b=3)=> a+b
+    console.log(add(1,0))
+    var aaa=document.body;
+    aaa.onclick=function(){
+        setTimeout(()=>{
+            console.log(this)//console.log(body)
+        },1000)
+    }
+var dd=1234;
+        var id=1234;
+        var objj={
+                id:123,
+                g:function(){
+                    setTimeout(()=>{
+                        console.log(this.id)//123
+                    },100)
+                }
+         };
+objj.g();
+    var ary=[1,2,3,4];
+    var num=ary.find(function(value,index,ary){//和forEach/map一样
+        return value > 3;//返回 4
+    })
+
+</script>
+</body>
+</html>

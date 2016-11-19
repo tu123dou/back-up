@@ -1,7 +1,6 @@
 /**
- * Created by 39753 on 2016/11/17.
+ * Created by QW on 2016/11/19.
  */
-//1.获取数据 2.绑定数据 3.延迟加载+第一张图片显示出来，并且层级提高 4.自动渐隐渐现 5.焦点自动轮播 6.鼠标移入停止移出继续 7.点击焦点手动切换 8.点击左右按钮进行切换
 (function () {
     var oBox = document.getElementById('box');
     var oBoxInner = oBox.getElementsByTagName('div')[0];
@@ -59,7 +58,6 @@
                             opacity: 1
                         }
                     })
-
                 }
             })(i);
         }
@@ -73,40 +71,27 @@
         }
         n++;
         setBanner();
-        //让那张图片显示：1）先把需要显示的图片层级提高，其他图片层级为0 2）透明度0-1，让兄弟元素，透明度为0：
+
     }
+    //不用for循环,借用透明度可以决定让哪张图片显示(前提是从第一张到最后一张图片加载时);
+    // 渐隐渐现要求:当前图片透明度由0->1,前一张图片等当前图片的透明度为1时,前一张图片透明度一下子变为0;但最后一张图片转第一张的图片的时候,第一张图片会被最后一张图片盖住,所以需要提升第一张的层级,最后一张图片透明度为0时,即可取消第一张的层级.
     function setBanner() {
-        for (var i = 0; i < aDiv.length; i++) {
-            if (i === n) {//要显示的图片
-                utils.css(aDiv[i], {
-                    zIndex:1,
-                });
-                //aDiv[i].style.zIndex=1;
+         //n表示要显示的图片
+        // 1.对最后一个过度到第一张图片时的特殊处理(提升第一张图片的层级)
+                   n==0?aDiv[0].style.zIndex=1:void 0;
+        //2.添加过度效果
                 animate({
-                    id: aDiv[i],
+                    id: aDiv[n],
                     target: {
-                        opacity: 1,
+                        opacity: 1
                     },
+        //3.回调函数 作用:等过度效果结束时,把n(即当前图片)前面的图片的透明度设为0
                     callback: function () {
-                        var siblings = utils.siblings(this);
-                        for(var j=0; j<siblings.length; j++){
-                            utils.css(siblings[j],'opacity',0);
-                        }
+                        var index=null;
+                        index=n==0?aDiv.length-1:n-1;
+                        utils.css(aDiv[index],'opacity',0);//把上一个图片的透明度设为0;
+                        utils.css(aDiv[0], 'zIndex', 0);//此时可以去掉第一张图片的层级,因为最后一张的图片的透明度为0;
                     }
                 });
-                continue;
             }
-            utils.css(aDiv[i], 'zIndex', 0)
-        }
-    }
 })();
-
-
-
-
-
-
-
-
-
-

@@ -186,7 +186,7 @@
         //1：对参数的处理；
         var defaultOpt={//对默认值的处理
             effect:0,
-            duration:700
+            duration:1000
         };
         //用户传了按用户传的值来；用户没传按默认值来；
         for(var attr in opt){

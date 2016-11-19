@@ -48,14 +48,13 @@
         tBody.appendChild(frg);
         frg=null;
     }
-    /*function bind(){//字符串绑定数据
+   /* function bind(){//字符串绑定数据
         var str='';
         for(var i=0; i<data.length; i++){
             var curData=data[i];
             curData.sex=curData.sex==0?'男':'女';
             str+='<tr>\
-                <td>'+curData.name+'</td>\
-                <td>'+curData.age+'</td>\
+                <td>'+curData.name+'</td><td>'+curData.age+'</td>\
                 <td>'+curData.score+'</td>\
                 <td>'+curData.sex+'</td>\
                 </tr>';

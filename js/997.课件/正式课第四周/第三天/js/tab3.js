@@ -24,7 +24,7 @@ MyTab.prototype={//原型上的this都指的是实例
     init:function(){
         var _this=this;//这里的this是实例,先保存到_this里面
         //1.获取数据
-        this.getData();//是实例.getData(也可以说成单例模式中本模块相互调用 用this.)  ;this.getData()--getData被调用,getData里面的this是getData前面的元素(实例).
+        this.getData();//是实例.getData 实例可以直接拿到原型上的一级属性名(也可以说成单例模式中本模块相互调用 用this.)  ;this.getData()--getData被调用,getData里面的this是getData前面的元素(实例).
         //2.绑定数据
         this.bind();
         //3.延迟加载
@@ -36,6 +36,9 @@ MyTab.prototype={//原型上的this都指的是实例
         this.timer=setInterval(function(){
             _this.autoMove();
         },this.duration);
+    //    this.timer=setInterval(()=>{//这样写也可以这是ECM6的箭头函数
+    //            this.autoMove();
+    //},this.duration);
         //5.焦点自动轮播
         //6.移入停止移出继续
         this.overout();
@@ -48,7 +51,7 @@ MyTab.prototype={//原型上的this都指的是实例
         var _this=this;//这里的作用保存正确的 this,和选项卡自定义属性一样.
         var xml=new XMLHttpRequest;
         xml.open('get',this.url,false);
-        xml.onreadystatechange=function(){
+        xml.onreadystatechange=function(){//这里也可以改成箭头函数
             if(xml.readyState==4 && /^2\d{2}$/.test(xml.status)){
                 _this.data=utils.jsonParse(xml.responseText)//这里的this指的是事件前面的xml,所以先var _this=this;
             }
@@ -68,7 +71,8 @@ MyTab.prototype={//原型上的this都指的是实例
         this.oUl.innerHTML=strLi;
     },
     lazyImg:function(){
-        for(var i=0; i<this.aImg.length; i++){
+        //这三种形式都可以;总结:let会在哪里有I 就在哪形成闭包;可以取带自定义属性和闭包
+        /*for(var i=0; i<this.aImg.length; i++){
             var _this=this;
             (function(index){
                 var curImg=_this.aImg[index];
@@ -79,7 +83,36 @@ MyTab.prototype={//原型上的this都指的是实例
                     tmpImg=null;
                 }
             })(i);
-        }
+        }*/
+        /*for(let i=0; i<this.aImg.length; i++){
+                let curImg=this.aImg[i];
+                var tmpImg=new Image;
+                tmpImg.src=curImg.getAttribute('realImg');
+                tmpImg.onload=function(){
+                    curImg.src=this.src;
+                    tmpImg=null;
+                }
+        }*/
+         /*for(let i=0; i<this.aImg.length; i++){
+                var _this=this;
+                //var curImg=this.aImg[i];
+                var tmpImg=new Image;
+                tmpImg.src=curImg.getAttribute('realImg');
+                tmpImg.onload=function(){
+                    _this.aImg[i].src=this.src;//会在此形成闭包
+                    tmpImg=null;
+                }
+        }*/
+        /*for(var i=0; i<this.aImg.length; i++){
+            //var _this=this;
+            let curImg=this.aImg[i];//会在此形成闭包保存i值
+            var tmpImg=new Image;
+            tmpImg.src=curImg.getAttribute('realImg');
+            tmpImg.onload=function(){
+                curImg.src=this.src;//此处的curImg会到前面闭包找;
+                tmpImg=null;
+            }
+        }*/
     },
     autoMove:function(){
         if(this.n>=this.aDiv.length-1){
@@ -94,7 +127,7 @@ MyTab.prototype={//原型上的this都指的是实例
                 left:-this.n*1000
             },
             duration:800
-        })
+        });
         this.bannerTip();
     },
     bannerTip:function(){
