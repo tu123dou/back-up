@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div{
+            width: 840px;
+            margin:10px auto;
+            position: relative;
+        }
+        #div>img{
+            width: 200px;
+        }
+        #mark{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        #mark>img{
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div">
+    <img src="img/apple_1.jpg" realImg="img/apple_1_bigger.jpg" alt="">
+    <img src="img/apple_2.jpg" realImg="img/apple_2_bigger.jpg" alt="">
+    <img src="img/apple_3.jpg" realImg="img/apple_3_bigger.jpg" alt="">
+    <img src="img/apple_4.jpg" realImg="img/apple_4_bigger.jpg" alt="">
+    <div id="mark"><img src="" alt=""></div>
+</div>
+<script src="../../../997.课件/正式课第四周/第五天/js/jquery-2.0.3.js"></script>
+<script>
+   var $box=$('#div');
+   var $pos=$box.offset();
+    $box.mouseover(function(e){
+        $('#mark').show().find('img').attr('src', e.target.getAttribute('realImg'))
+    });
+   $box.mousemove(function(e){
+       $('#mark').css({
+           left: e.clientX-$pos.left+10,
+           top: e.clientY-$pos.top+10
+       })
+   });
+    $box.mouseout(function(){
+        $('#mark').hide()
+    })
+</script>
+</body>
+</html>

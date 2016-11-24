@@ -79,13 +79,13 @@
         for (var i = 0; i < aDiv.length; i++) {
             if (i === n) {//要显示的图片
                 utils.css(aDiv[i], {
-                    zIndex:1,
+                    zIndex:1
                 });
                 //aDiv[i].style.zIndex=1;
                 animate({
                     id: aDiv[i],
                     target: {
-                        opacity: 1,
+                        opacity: 1
                     },
                     callback: function () {
                         var siblings = utils.siblings(this);

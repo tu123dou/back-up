@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            width:200px;
+            height: 200px;
+        border:4px solid rebeccapurple;
+        }
+        #p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            border:5px solid orange;
+        }
+    </style>
+</head>
+<body id="w">
+<div id="div">
+    <p id="p"></p>
+</div>
+
+<script>
+//    var btn=document.getElementById('btn');
+//    btn.onkeydown=function(e){
+//        e=e||window.event;
+//       if((e.keyCode>57|| e.keyCode<48)&& e.keyCode!==8){
+//           if(e.preventDefault){
+//               e.preventDefault();
+//           }else{
+//               returnValue=false
+//           }
+//       }
+//    }
+//    document.body.onclick=function(e){
+//        console.log(e)
+//    }
+    div.onmouseenter=function(e){
+//        if(e.target.id=='p') {
+//            console.log('a')
+//        }
+//        console.log('R');
+//        e.stopPropagation();
+        console.log(e.target)
+    }
+</script>
+</body>
+</html>

@@ -212,7 +212,7 @@
         //4.开启定时器，进行时间累加，求出不同时间点的新位置，并设置最新位置
         clearInterval(defaultOpt.id.timer)
         defaultOpt.id.timer=setInterval(function(){
-            if(time>=defaultOpt.duration){//停止条件的判断；
+            if(time>=defaultOpt.duration){//停止条件的判断；//把定时器放在id的自定义属性上
                 utils.css(defaultOpt.id,defaultOpt.target);
                 clearInterval(defaultOpt.id.timer);
                 defaultOpt.callback && defaultOpt.callback.call(defaultOpt.id);

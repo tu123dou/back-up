@@ -30,7 +30,7 @@ MyTab.prototype={//原型上的this都指的是实例
         //3.延迟加载
         setTimeout(function(){
             _this.lazyImg();
-        },500);//如果写成this.lazyImg,那么当lazyImg被调用的时候lazyImg里面的this指的是window,因为setTimeOut是window.setTimeOut,所以this是window.写成_this.lazyImg相当于是实例 点 lazyImg;
+        },500);//如果写成this.lazyImg,那么当lazyImg被调用的时候lazyImg里面的this指的是window,因为setTimeOut是window.setTimeOut,所以this是window.写成_this.lazyImg相当于是实例 点 lazyImg;(也可以认为闭包函数的this指的是window)
         //4.图片自动轮播
         clearInterval(this.timer);
         this.timer=setInterval(function(){
@@ -50,7 +50,7 @@ MyTab.prototype={//原型上的this都指的是实例
     getData:function(){
         var _this=this;//这里的作用保存正确的 this,和选项卡自定义属性一样.
         var xml=new XMLHttpRequest;
-        xml.open('get',this.url,false);
+        xml.open('get',this.url,false);//注意open后边直接是()没有=
         xml.onreadystatechange=function(){//这里也可以改成箭头函数
             if(xml.readyState==4 && /^2\d{2}$/.test(xml.status)){
                 _this.data=utils.jsonParse(xml.responseText)//这里的this指的是事件前面的xml,所以先var _this=this;
@@ -61,7 +61,7 @@ MyTab.prototype={//原型上的this都指的是实例
     bind:function(){
         var strDiv='';
         var strLi='';
-        for(var i=0; i<this.data.length; i++){
+        for(var i=0; i<this.data.length; i++){//注意这里是data[i].imgSrc!!!!!!
             strDiv+='<div><img src="" realImg="'+this.data[i].imgSrc+'" alt=""></div>';
             strLi+=i==0?'<li class="on"></li>':'<li></li>';
         }
@@ -72,7 +72,7 @@ MyTab.prototype={//原型上的this都指的是实例
     },
     lazyImg:function(){
         //这三种形式都可以;总结:let会在哪里有I 就在哪形成闭包;可以取带自定义属性和闭包
-        /*for(var i=0; i<this.aImg.length; i++){
+        for(var i=0; i<this.aImg.length; i++){
             var _this=this;
             (function(index){
                 var curImg=_this.aImg[index];
@@ -83,9 +83,9 @@ MyTab.prototype={//原型上的this都指的是实例
                     tmpImg=null;
                 }
             })(i);
-        }*/
+        }
         /*for(let i=0; i<this.aImg.length; i++){
-                let curImg=this.aImg[i];
+                let curImg=this.aImg[i];//会在此形成私有作用域
                 var tmpImg=new Image;
                 tmpImg.src=curImg.getAttribute('realImg');
                 tmpImg.onload=function(){
@@ -163,7 +163,7 @@ MyTab.prototype={//原型上的this都指的是实例
                             left:-_this.n*1000
                         },
                         duration:800
-                    })
+                    });
                     _this.bannerTip();
                 }
             })(i);
@@ -186,7 +186,7 @@ MyTab.prototype={//原型上的this都指的是实例
                     left:-_this.n*1000
                 },
                 duration:800
-            })
+            });
             _this.bannerTip();
         }
     }

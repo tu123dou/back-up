@@ -51,7 +51,12 @@ var obj={
 };
 console.log(obj.name);//h1wb
 11.对象的解构赋值
-var  {l,t} ={l:50,t:58};//解构赋值:变量名必须和属性名一致
+var a=1;
+var b=2;
+var obj={a,b};
+obj.a//1;
+
+var  {l,t} ={l:50,t:58};//解构赋值:变量名必须和属性名一致,=后面也可以是个对象的变量
 alert(l);//50
 alert(t);//58
 12.Object.keys({}).length//-->0//ECM5的
@@ -87,7 +92,7 @@ aa()//如果传参了aa(2,3)->5
 function vv(...name){
 console.log(name)//[1, 2, 2, 4, Object, "scx"]是一个数组
 }
-vv(1,2,2,4,{name:'scx'},'scx')
+vv(1,2,2,4,{name:'scx'},'scx')//可以实现逗号分割的序列转为数组
 或者写成 扩张运算符
 function vv(...name){
 console.log(name)//[1, 2, 2, 4, Object, "scx"]是一个数组

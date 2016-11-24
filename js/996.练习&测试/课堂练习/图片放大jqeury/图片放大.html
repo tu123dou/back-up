@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            padding:10px;
+        }
+        #s{
+            width: 430px;
+            height:430px;
+            position: relative;
+            float:left;
+        }
+        #s img{
+            width: 430px;
+        }
+        #s #mark{
+            width:215px;
+            height:215px;
+            background: royalblue;
+            opacity:0.4;
+            filter:alpha(opacity=40);
+            position: absolute;
+            left:0;
+            top:0;
+            display: none;
+          }
+        #b{
+            float: left;
+            width: 430px;
+            height:430px;
+            overflow: hidden;
+            margin-left: 10px;
+            position: relative;
+        }
+        #b img{
+            position: absolute;
+            width:860px;
+            height:860px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="s">
+    <img src="img/1.jpg" alt="">
+    <div id="mark"></div>
+</div>
+<div id="b"><img id="bb" src="img/2.jpg" alt=""></div>
+<script>
+    var bb=document.getElementById('bb');
+//    var os=document.getElementById(s);//????? s引号
+    s.onmouseover=function(){
+        mark.style.display='block';
+    };
+s.onmousemove=function(e){
+    var l= e.clientX- s.offsetLeft-mark.offsetWidth/2;
+    var t=e.clientY- s.offsetTop-mark.offsetHeight/2;
+    var maxL= s.offsetWidth-mark.offsetWidth;
+    var maxT= s.offsetHeight-mark.offsetHeight;
+    if(l<0){
+        l=0
+    }else if(l>maxL){
+        l=maxL;
+    }
+    if(t<0){
+        t=0
+    }else if(t>maxT){
+        t=maxT;
+    }
+    mark.style.left=l+'px';
+    mark.style.top= t+'px';
+    bb.style.left=-l*2+'px';
+    bb.style.top=-t*2+'px';
+    console.log('A')
+};
+s.onmouseout=function(){
+    mark.style.display='none'
+}
+
+</script>
+</body>
+</html>
