@@ -34,6 +34,7 @@
         1）git add .                   解释:--把这个目录变成Git可以管理的仓库
         2)git commit -m"注释"          解释:--把文件提交到仓库
         3）git push origin master      解释:--把本地库的所有内容推送到远程库上
+        4)git push -u origin master
 6.学生如何down老师的讲义:
     1)登录你们自己的github;然后在地址栏，粘贴老师的远程仓库地址：
     https://github.com/zhufengpeixun/Javascript201612
