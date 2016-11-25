@@ -33,17 +33,18 @@
     var oBox1=document.getElementById('box1');
     var oBox2=document.getElementById('box2');
     var oBox3=document.getElementById('box3');
-    oBox1.addEventListener('click',function(e){
-        alert('box1')
-    },false);
+    oBox1.addEventListener('click',fn,true);
     oBox2.addEventListener('click',function(e){
         alert('box2')
-    },false);
+    },true);
     oBox3.addEventListener('click',function(e){
         e.stopPropagation();//e.cancelBubble=true;
 
         alert('box3')
     },false);
+    function fn(){
+        alert('box1')
+    }
     /*oBox1.onclick=function(){
         alert('box1')
     };

@@ -72,8 +72,14 @@
     f();当f被调用的时候，以上三种的调用结果一样；不同的就是他们预解释不同；
 2）.和attribute的区别：
     区别主要有两点：
-    1）获取的时候：标签上如果设置了自定义属性，我们通过.拿不到自定义属性的值，但是通过obj.getAttribute()可以拿到；
-    2）设置的时候：通过点设置的自定义属性，在标签上看不到，但是通过setAttribute设置的值，在标签上可以看到；
+    1）获取的时候：标签上如果设置了自定义属性，我们通过.拿不到自定义属性的值，但是通过obj.getAttribute()可以拿到；(setAttribute操作的是行内的属性)
+    2）设置的时候：通过点设置的自定义属性(除了id)，在标签上看不到，但是通过setAttribute设置的值，在标签上可以看到；
+    3) 自己补充:通过setAttribute 修改元素的私有属性如下:
+      document.body.onclick=function(){console.log(this)};
+                 document.body.setAttribute('onclick','fn()');
+                 function fn(){
+                 console.log(this)/输出的是window
+                 };
     注意事项：.和attribute不要混合使用；
     。。。。。。。。。。。。。。。。。。。。。。。。。。。
     作业：
