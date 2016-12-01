@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1.Symbol是一个基本数据类型,产生一个唯一的值;现在总共6种数据类型
+var a=Symbol();//不需要new
+2.声明变量 除了var还有let ,主要用在选项卡中的自定义属性(onclick里面的)
+例:for(let i=0;i<4;i++){
+    div[i].onclick=function(){
+    console.log(i)//哪个div点击就输出哪个索引
+    }
+  }
+3.const es6中声明和let、val一样  特点:一旦声明就不能更改
+4. x.includes('y')   x是否包含y ,和indexOf一样,返回值是布尔值
+5.模板字符串--字符串拼接*******************
+例 之前是这样做的:
+var name='qwe',age=12;
+var str='我的名字是'+name+'我的年龄是'+age+'岁';
+Ecm6这样做:**********
+var name='qwe',age=12;
+var str=`我的名字是${name}我的年龄是${age}岁`;//注意符号用这种 ``
+6.Math.trunc和parseInt作用一样,去掉小数部分
+Array.from()类数组转数组
+7.find 找到当前数组里面的第一个满足条件的值
+8.findIndex 找到当前数组里面第一个满足条件值的索引
+例
+var ary=[1,2,3,4]
+var num=ary.find(function(value,attr,ary){//和forEach/map一样
+return val>3//返回4
+})
+*****对象的扩张*********************
+9.对象的扩张:除了assign还可以有$.extend()
+Object.assign():var obj={a:1,b:2,c:3};
+                var obj1={a:11,b:22};
+                console.log( Object.assign({},obj,obj1))//Object {a: 11, b: 22, c: 3}
+10.对象的扩张写法
+例//对象的扩张写法
+var name="h1wb";
+常规写法:
+// var obj={
+// 	name:name,//当属性名和属性值一样式可以只写name
+// 	go:function(){},//可以去掉   : function
+// }
+扩张之后的写法:
+var obj={
+    name,
+    go(){}
+};
+console.log(obj.name);//h1wb
+11.对象的解构赋值
+var a=1;
+var b=2;
+var obj={a,b};
+obj.a//1;
+
+var  {l,t} ={l:50,t:58};//解构赋值:变量名必须和属性名一致,=后面也可以是个对象的变量
+alert(l);//50
+alert(t);//58
+12.Object.keys({}).length//-->0//ECM5的
+//返回所有的属性名
+(1)可以把对象的属性名取到放到数组里面
+(2)可以检测是不是空对象,如果是空对象返回空数组,可以用.length检测
+13.
+    var name='珠峰培训';
+    var obj={
+        'name':'scx'//name 写不写''都可以
+    };
+    var obj1={
+        [name]:'dddddd'//变量名可以做为属性名
+    };
+    console.log(obj1[name])//ddddd
+    console.log(obj['name'])//scx
+    console.log(obj1['珠峰培训'])//dddddd
+*****函数的扩张***********************
+14.可以给参数设置默认值
+function aa(ele){
+var ele=ele||document;
+}
+可以写成这样:
+function aa(ele=document){
+
+};
+也可以这样:
+function aa(a=1,b=2){
+console.log(a+b)
+};
+aa()//如果传参了aa(2,3)->5
+还可以这样(rest参数):
+function vv(...name){
+console.log(name)//[1, 2, 2, 4, Object, "scx"]是一个数组
+}
+vv(1,2,2,4,{name:'scx'},'scx')//可以实现逗号分割的序列转为数组
+或者写成 扩张运算符
+function vv(...name){
+console.log(name)//[1, 2, 2, 4, Object, "scx"]是一个数组
+}
+vv(...[1,2,2,4,{name:'scx'},'scx'])//将一个数组(类数组)转化为用逗号分割的参数序列(可以用到Math.max(...[12,23,42,4])  )
+15.箭头函数
+特点:this指向  箭头函dfd数里面的this在定义阶段就确定了,之前的写法this是在执行的时候才知道this是谁;
+定义时箭头函数所在的环境里this是谁,那么此箭头函数里面的this就是谁(箭头函数里面的this==箭头函数外面的this)
+var add=function (a,b){
+return a+b
+}
+var add=(a=2,b=3)=>{
+return a+b;
+}
+console.log(add())//5
+或者这么写:
+var add=(a=2,b=3)=> a+b
+console.log(add(1,2))//3  传参就按传的来
+....数据类型..........
+Set和Map数据类型
+var set1= new Set([1,2,3,1,4,2])
+console.log(set1)//{1,2,3,4} 去重后的类数组
+...[1,2,3,4]将一个数组(类数组)转化为用逗号分割的参数序列-->1,2,3,4
+                        也可以用:Array .from(set1)//类数组转数组
+应用:数组去重:
+function unique(ary){
+    return [...new Set(ary)]
+};
+unique([1,2,42,52,1,2,3])//-->[1,2,42,52,3]
+Set中的方法 add(),has(),delete(),clear()
+new Map([['name','scx],['age','18']]);
+for (var value of ary){//遍历:注意 (1)不是 索引 而是  值 (2).不适合原生的对象
+}
+</body>
+</html>
