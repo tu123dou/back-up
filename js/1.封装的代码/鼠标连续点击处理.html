@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0
+
+        }
+        div{
+            width:500px;
+            height:500px;
+            background: red;
+            overflow: scroll;
+        }
+        p{
+            width:100%;
+            height:3000px;
+            background: orange;
+        }
+    </style>
+</head>
+<body style="height: 3000px;">
+<div id="div"><p id="p"></p></div>
+
+</body>
+<script>
+    var timer=null;
+    div.onclick=function(){
+        console.log(2);
+        clearTimeout(timer);
+       timer=setTimeout(function(){
+           console.log(1)
+       },1000)
+    }
+</script>
+</html>
